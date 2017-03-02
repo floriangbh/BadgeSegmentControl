@@ -1,18 +1,17 @@
 //
-//  SMBasicSegmentView.swift
-//  SMSegmentViewController
+//  SegmentView.swift
+//  BadgeSegmentControl
 //
-//  Created by Si Ma on 01/10/15.
-//  Copyright © 2015 Si Ma. All rights reserved.
+//  Created by terflogag on 03/02/2017.
+//  Copyright (c) 2017 terflogag. All rights reserved.
 //
 
 import UIKit
 
-open class SMSegmentView: UIControl {
-
-    open var segmentAppearance: SMSegmentAppearance?
-
-    // Divider colour & width
+open class SegmentView: UIControl {
+    
+    open var segmentAppearance: SegmentAppearance?
+    
     open var dividerColour: UIColor = UIColor.lightGray {
         didSet {
             self.setNeedsDisplay()
@@ -23,7 +22,7 @@ open class SMSegmentView: UIControl {
             self.updateSegmentsLayout()
         }
     }
-
+    
     open var selectedSegmentIndex: Int {
         get {
             if let segment = self.selectedSegment {
@@ -41,56 +40,52 @@ open class SMSegmentView: UIControl {
             }
         }
     }
-
-    open var organiseMode: SMSegmentOrganiseMode = .horizontal {
-        didSet {
-            if self.organiseMode != oldValue {
-                self.setNeedsDisplay()
-            }
-        }
-    }
-
+    
     open var numberOfSegments: Int {
         get {
             return segments.count
         }
     }
-
-    fileprivate var segments: [SMSegment] = []
-    fileprivate var selectedSegment: SMSegment?
-
-
-    // INITIALISER
+    
+    fileprivate var segments: [Segment] = []
+    fileprivate var selectedSegment: Segment?
+    
+    
+    // MARK: - Lifecycle
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.layer.masksToBounds = true
-        self.segmentAppearance = SMSegmentAppearance()
+        self.segmentAppearance = SegmentAppearance()
     }
-
+    
     override public init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clear
         self.layer.masksToBounds = true
-        self.segmentAppearance = SMSegmentAppearance()
+        self.segmentAppearance = SegmentAppearance()
     }
-
-    public init(frame: CGRect, dividerColour: UIColor, dividerWidth: CGFloat, segmentAppearance: SMSegmentAppearance) {
-
+    
+    public init(frame: CGRect, 
+                dividerColour: UIColor, 
+                dividerWidth: CGFloat, 
+                segmentAppearance: SegmentAppearance) {
+        
         super.init(frame: frame)
-
+        
         self.dividerColour = dividerColour
         self.dividerWidth = dividerWidth
         
         self.segmentAppearance = segmentAppearance
-
+        
         self.backgroundColor = UIColor.clear
         self.layer.masksToBounds = true
     }
     
+    
+    // MARK: - Actions
 
-    // MARK: Actions
-    // MARK: Select/deselect Segment
-    fileprivate func selectSegment(_ segment: SMSegment) {
+    fileprivate func selectSegment(_ segment: Segment) {
         segment.setSelected(true)
         self.selectedSegment = segment
         self.sendActions(for: .valueChanged)
@@ -99,16 +94,20 @@ open class SMSegmentView: UIControl {
         self.selectedSegment?.setSelected(false)
         self.selectedSegment = nil
     }
+    
+    // MARK: - Manage Segment
 
-    // MARK: Add Segment
-    open func addSegmentWithTitle(_ title: String?, onSelectionImage: UIImage?, offSelectionImage: UIImage?) {
-        self.insertSegmentWithTitle(title, onSelectionImage: onSelectionImage, offSelectionImage: offSelectionImage, index: self.segments.count)
+    open func addSegmentWithTitle(_ title: String?, onSelectionImage: UIImage? = nil, offSelectionImage: UIImage? = nil) {
+        self.insertSegmentWithTitle(title, 
+                                    onSelectionImage: onSelectionImage, 
+                                    offSelectionImage: offSelectionImage, 
+                                    index: self.segments.count)
     }
-
+    
     open func insertSegmentWithTitle(_ title: String?, onSelectionImage: UIImage?, offSelectionImage: UIImage?, index: Int) {
-
-        let segment = SMSegment(appearance: self.segmentAppearance)
-
+        
+        let segment = Segment(appearance: self.segmentAppearance)
+        
         segment.title = title
         segment.onSelectionImage = onSelectionImage
         segment.offSelectionImage = offSelectionImage
@@ -123,12 +122,11 @@ open class SMSegmentView: UIControl {
         
         self.resetSegmentIndicesWithIndex(index, by: 1)
         self.segments.insert(segment, at: index)
-
+        
         self.addSubview(segment)
         self.layoutSubviews()
     }
     
-    // MARK: Remove Segment
     open func removeSegmentAtIndex(_ index: Int) {
         assert(index >= 0 && index < self.segments.count, "Index (\(index)) is out of range")
         
@@ -149,81 +147,61 @@ open class SMSegmentView: UIControl {
             }
         }
     }
-
-    // MARK: UI
-    // MARK: Update layout
+    
+    // MARK: - Layout 
+    
     open override func layoutSubviews() {
         super.layoutSubviews()
         self.updateSegmentsLayout()
     }
-
+    
     fileprivate func updateSegmentsLayout() {
         
         guard self.segments.count > 0 else {
             return
         }
-
+        
         if self.segments.count > 1 {
-            if self.organiseMode == .horizontal {
-                let segmentWidth = ceil((self.frame.size.width - self.dividerWidth * CGFloat(self.segments.count-1)) / CGFloat(self.segments.count))
-
-                var originX: CGFloat = 0.0
-                for segment in self.segments {
-                    segment.frame = CGRect(x: originX, y: 0.0, width: segmentWidth, height: self.frame.size.height)
-                    originX += segmentWidth + self.dividerWidth
-                }
+            let segmentWidth = ceil((self.frame.size.width - self.dividerWidth * CGFloat(self.segments.count-1)) / CGFloat(self.segments.count))
+            
+            var originX: CGFloat = 0.0
+            for segment in self.segments {
+                segment.frame = CGRect(x: originX, y: 0.0, width: segmentWidth, height: self.frame.size.height)
+                originX += segmentWidth + self.dividerWidth
             }
-            else {
-                let segmentHeight = (self.frame.size.height - self.dividerWidth * CGFloat(self.segments.count-1)) / CGFloat(self.segments.count)
-
-                var originY: CGFloat = 0.0
-                for segment in self.segments {
-                    segment.frame = CGRect(x: 0.0, y: originY, width: self.frame.size.width, height: segmentHeight)
-                    originY += segmentHeight + self.dividerWidth
-                }
-            }
+            
         }
         else {
             self.segments[0].frame = CGRect(x: 0.0, y: 0.0, width: self.frame.size.width, height: self.frame.size.height)
         }
-
+        
         self.setNeedsDisplay()
     }
-
-    // MARK: Drawing Segment Dividers
+    
+    // MARK: Drawing
+    
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
-
+        
         let context = UIGraphicsGetCurrentContext()!
         self.drawDividerWithContext(context)
     }
-
+    
     fileprivate func drawDividerWithContext(_ context: CGContext) {
-
+        
         context.saveGState()
-
+        
         if self.segments.count > 1 {
             let path = CGMutablePath()
-
-            if self.organiseMode == .horizontal {
-                var originX: CGFloat = self.segments[0].frame.size.width + self.dividerWidth/2.0
-                for index in 1..<self.segments.count {
-                    path.move(to: CGPoint(x: originX, y: 0.0))
-                    path.addLine(to: CGPoint(x: originX, y: self.frame.size.height))
-
-                    originX += self.segments[index].frame.width + self.dividerWidth
-                }
+            
+            var originX: CGFloat = self.segments[0].frame.size.width + self.dividerWidth/2.0
+            for index in 1..<self.segments.count {
+                path.move(to: CGPoint(x: originX, y: 0.0))
+                path.addLine(to: CGPoint(x: originX, y: self.frame.size.height))
+                
+                originX += self.segments[index].frame.width + self.dividerWidth
             }
-            else {
-                var originY: CGFloat = self.segments[0].frame.size.height + self.dividerWidth/2.0
-                for index in 1..<self.segments.count {
-                    path.move(to: CGPoint(x: 0.0, y: originY))
-                    path.addLine(to: CGPoint(x: self.frame.size.width, y: originY))
-
-                    originY += self.segments[index].frame.height + self.dividerWidth
-                }
-            }
-
+            
             context.addPath(path)
             context.setStrokeColor(self.dividerColour.cgColor)
             context.setLineWidth(self.dividerWidth)
@@ -231,5 +209,11 @@ open class SMSegmentView: UIControl {
         }
         
         context.restoreGState()
+    }
+    
+    // MARK: - Badge 
+    
+    open func updateBadge(forValue value: Int, andSection section: Int) {
+        self.segments[section].updateBadgeValue(forValue: value)
     }
 }

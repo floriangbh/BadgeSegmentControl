@@ -1,16 +1,17 @@
 //
-//  SMSegmentAppearance.swift
-//  SMSegmentViewController
+//  SegmentAppearance.swift
+//  BadgeSegmentControl
 //
-//  Created by Si MA on 11/07/2016.
-//  Copyright © 2016 si.ma. All rights reserved.
+//  Created by terflogag on 03/02/2017.
+//  Copyright (c) 2017 terflogag. All rights reserved.
 //
 
 import UIKit
 
-open class SMSegmentAppearance {
+open class SegmentAppearance {
     
-    // PROPERTIES
+    // MARK: - Var 
+    
     open var segmentOnSelectionColour: UIColor
     open var segmentOffSelectionColour: UIColor
     open var segmentTouchDownColour: UIColor {
@@ -19,15 +20,24 @@ open class SMSegmentAppearance {
             var onSelectionSaturation: CGFloat = 0.0
             var onSelectionBrightness: CGFloat = 0.0
             var onSelectionAlpha: CGFloat = 0.0
-            self.segmentOnSelectionColour.getHue(&onSelectionHue, saturation: &onSelectionSaturation, brightness: &onSelectionBrightness, alpha: &onSelectionAlpha)
+            self.segmentOnSelectionColour.getHue(&onSelectionHue, 
+                                                 saturation: &onSelectionSaturation, 
+                                                 brightness: &onSelectionBrightness, 
+                                                 alpha: &onSelectionAlpha)
             
             var offSelectionHue: CGFloat = 0.0
             var offSelectionSaturation: CGFloat = 0.0
             var offSelectionBrightness: CGFloat = 0.0
             var offSelectionAlpha: CGFloat = 0.0
-            self.segmentOffSelectionColour.getHue(&offSelectionHue, saturation: &offSelectionSaturation, brightness: &offSelectionBrightness, alpha: &offSelectionAlpha)
+            self.segmentOffSelectionColour.getHue(&offSelectionHue, 
+                                                  saturation: &offSelectionSaturation, 
+                                                  brightness: &offSelectionBrightness, 
+                                                  alpha: &offSelectionAlpha)
             
-            return UIColor(hue: onSelectionHue, saturation: (onSelectionSaturation + offSelectionSaturation)/2.0, brightness: (onSelectionBrightness + offSelectionBrightness)/2.0, alpha: (onSelectionAlpha + offSelectionAlpha)/2.0)
+            return UIColor(hue: onSelectionHue, 
+                           saturation: (onSelectionSaturation + offSelectionSaturation)/2.0, 
+                           brightness: (onSelectionBrightness + offSelectionBrightness)/2.0, 
+                           alpha: (onSelectionAlpha + offSelectionAlpha)/2.0)
         }
     }
     
@@ -39,8 +49,8 @@ open class SMSegmentAppearance {
     
     open var contentVerticalMargin: CGFloat
     
+    // MARK: - Init
     
-    // INITIALISER
     public init() {
         
         self.segmentOnSelectionColour = UIColor.darkGray
@@ -54,7 +64,13 @@ open class SMSegmentAppearance {
         self.contentVerticalMargin = 5.0
     }
     
-    public init(contentVerticalMargin: CGFloat, segmentOnSelectionColour: UIColor, segmentOffSelectionColour: UIColor, titleOnSelectionColour: UIColor, titleOffSelectionColour: UIColor, titleOnSelectionFont: UIFont, titleOffSelectionFont: UIFont) {
+    public init(contentVerticalMargin: CGFloat, 
+                segmentOnSelectionColour: UIColor, 
+                segmentOffSelectionColour: UIColor, 
+                titleOnSelectionColour: UIColor, 
+                titleOffSelectionColour: UIColor, 
+                titleOnSelectionFont: UIFont, 
+                titleOffSelectionFont: UIFont) {
         
         self.contentVerticalMargin = contentVerticalMargin
         

@@ -1,14 +1,14 @@
 //
-//  SMSegmentConstants.swift
-//  SMSegmentViewController
+//  SegmentViewConstants.swift
+//  BadgeSegmentControl
 //
-//  Created by Si MA on 17/06/2016.
-//  Copyright © 2016 si.ma. All rights reserved.
+//  Created by terflogag on 03/02/2017.
+//  Copyright (c) 2017 terflogag. All rights reserved.
 //
 
 import Foundation
 
-public struct SMSegmentedControlKeys {
+public struct SegmentedControlKeys {
     
     // Image/text margin to segment top/bottom
     static let kContentVerticalMargin = "VerticalMargin"
@@ -23,9 +23,4 @@ public struct SMSegmentedControlKeys {
     
     // Font of the title
     static let kTitleFont = "TitleFont"
-}
-
-public enum SMSegmentOrganiseMode: Int {
-    case horizontal
-    case vertical
 }

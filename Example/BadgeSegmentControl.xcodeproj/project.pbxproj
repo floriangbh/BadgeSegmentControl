@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		76C020211E685E6D00CBE5A9 /* SegmentControlAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C020201E685E6D00CBE5A9 /* SegmentControlAppearence.swift */; };
 		CA748A69A4D64C6A044555ED /* Pods_BadgeSegmentControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAA67335AF504B435EB5C48 /* Pods_BadgeSegmentControl_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		607FACE51AFB9204008FA782 /* BadgeSegmentControl_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadgeSegmentControl_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		76C020201E685E6D00CBE5A9 /* SegmentControlAppearence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentControlAppearence.swift; sourceTree = "<group>"; };
 		856E31749EA47C69BE79973C /* BadgeSegmentControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BadgeSegmentControl.podspec; path = ../BadgeSegmentControl.podspec; sourceTree = "<group>"; };
 		8D566A96BA238A0716B57640 /* Pods-BadgeSegmentControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeSegmentControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgeSegmentControl_Tests/Pods-BadgeSegmentControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEFE977467E8239D818FC94 /* Pods_BadgeSegmentControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadgeSegmentControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				76C020201E685E6D00CBE5A9 /* SegmentControlAppearence.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -364,6 +367,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				76C020211E685E6D00CBE5A9 /* SegmentControlAppearence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
