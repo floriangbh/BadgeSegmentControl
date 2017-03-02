@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/BadgeSegmentControl.svg?style=flat)](http://cocoapods.org/pods/BadgeSegmentControl)
 [![Platform](https://img.shields.io/cocoapods/p/BadgeSegmentControl.svg?style=flat)](http://cocoapods.org/pods/BadgeSegmentControl)
 
+README : Building in progress... 
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
