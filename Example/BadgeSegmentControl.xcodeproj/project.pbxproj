@@ -175,6 +175,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				6CF828E102AAA1AEEF41DF49 /* [CP] Embed Pods Frameworks */,
 				B3AC93595EE7748A7DC38DC4 /* [CP] Copy Pods Resources */,
+				76C020221E68618500CBE5A9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -282,6 +283,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BadgeSegmentControl_Example/Pods-BadgeSegmentControl_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		76C020221E68618500CBE5A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		826A606B643889B4E26F423D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -532,16 +546,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D566A96BA238A0716B57640 /* Pods-BadgeSegmentControl_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -552,12 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F8F086751071407AFBA0387 /* Pods-BadgeSegmentControl_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
