@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLi-np-Bc4" customClass="SegmentView" customModule="BadgeSegmentControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLi-np-Bc4" customClass="BadgeSegmentControl" customModule="BadgeSegmentControl">
                                 <rect key="frame" x="16" y="72" width="343" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -37,7 +37,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SegmentControl with image and badge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXG-73-Drl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SegmentControl with image and text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXG-73-Drl">
                                 <rect key="frame" x="16" y="120" width="343" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Mf6-yP-8e6"/>
@@ -47,9 +47,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJf-A5-KE2">
-                                <rect key="frame" x="16" y="253" width="343" height="30"/>
+                                <rect key="frame" x="16" y="579" width="343" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="y0L-ZP-OUd"/>
+                                    <constraint firstAttribute="height" constant="30" id="VZd-Ie-tQb"/>
                                 </constraints>
                                 <state key="normal" title="Update first badge"/>
                                 <connections>
@@ -57,7 +57,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-LX-KgH">
-                                <rect key="frame" x="16" y="299" width="343" height="30"/>
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bo2-AZ-u7A"/>
+                                </constraints>
                                 <state key="normal" title="Update second badge">
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -65,35 +68,58 @@
                                     <action selector="doUpdateSecondBadgeClick:" destination="sHR-UU-bq5" eventType="touchUpInside" id="gdf-iB-O5X"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-EN-ncJ" customClass="SegmentView" customModule="BadgeSegmentControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-EN-ncJ" customClass="BadgeSegmentControl" customModule="BadgeSegmentControl">
                                 <rect key="frame" x="16" y="183" width="343" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SegmentControl with only image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji9-hE-IXb">
+                                <rect key="frame" x="16" y="231" width="343" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Waw-zz-Cae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FG3-3G-bQl" customClass="BadgeSegmentControl" customModule="BadgeSegmentControl">
+                                <rect key="frame" x="16" y="294" width="343" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="x4a-Ib-RjW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="leading" secondItem="G2S-EN-ncJ" secondAttribute="leading" id="08p-r9-qq0"/>
+                            <constraint firstItem="FG3-3G-bQl" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="0NH-5z-kvf"/>
                             <constraint firstItem="ule-dD-q3y" firstAttribute="top" secondItem="TCr-Ah-x2f" secondAttribute="bottom" id="3Xu-xL-xmo"/>
-                            <constraint firstItem="KJf-A5-KE2" firstAttribute="top" secondItem="QQ1-Ow-B9g" secondAttribute="top" constant="253" id="Blg-rc-PSt"/>
                             <constraint firstItem="BLi-np-Bc4" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="CF2-yV-4WV"/>
-                            <constraint firstItem="KJf-A5-KE2" firstAttribute="top" secondItem="G2S-EN-ncJ" secondAttribute="bottom" constant="30" id="Cvh-lF-vO9"/>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="trailing" secondItem="G2S-EN-ncJ" secondAttribute="trailing" id="E0G-nQ-ohr"/>
+                            <constraint firstItem="aQf-Cy-VWB" firstAttribute="top" secondItem="78Q-LX-KgH" secondAttribute="bottom" constant="20" id="FCD-UY-sih"/>
                             <constraint firstItem="BLi-np-Bc4" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="GAs-5l-It0"/>
                             <constraint firstItem="G2S-EN-ncJ" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="Gd0-Ox-kwr"/>
+                            <constraint firstItem="KJf-A5-KE2" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="J1t-HX-ey5"/>
                             <constraint firstItem="G2S-EN-ncJ" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="Lqy-c5-qcX"/>
+                            <constraint firstItem="Ji9-hE-IXb" firstAttribute="top" secondItem="G2S-EN-ncJ" secondAttribute="bottom" constant="8" symbolic="YES" id="NEp-P8-eU8"/>
                             <constraint firstItem="yXG-73-Drl" firstAttribute="top" secondItem="BLi-np-Bc4" secondAttribute="bottom" constant="8" symbolic="YES" id="Rfh-3R-pk9"/>
                             <constraint firstItem="G2S-EN-ncJ" firstAttribute="top" secondItem="yXG-73-Drl" secondAttribute="bottom" constant="8" id="S4R-l2-uqy"/>
+                            <constraint firstItem="KJf-A5-KE2" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="T1f-Tn-UeU"/>
+                            <constraint firstItem="78Q-LX-KgH" firstAttribute="top" secondItem="KJf-A5-KE2" secondAttribute="bottom" constant="8" id="X1z-aC-SCt"/>
                             <constraint firstItem="yXG-73-Drl" firstAttribute="trailing" secondItem="BLi-np-Bc4" secondAttribute="trailing" id="Z09-Ai-3lN"/>
+                            <constraint firstItem="Ji9-hE-IXb" firstAttribute="leading" secondItem="FG3-3G-bQl" secondAttribute="leading" id="ZqB-Cb-u7z"/>
+                            <constraint firstItem="Ji9-hE-IXb" firstAttribute="trailing" secondItem="FG3-3G-bQl" secondAttribute="trailing" id="b7V-v0-l7f"/>
+                            <constraint firstItem="78Q-LX-KgH" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="eWs-Zj-Msf"/>
                             <constraint firstItem="ule-dD-q3y" firstAttribute="trailing" secondItem="BLi-np-Bc4" secondAttribute="trailing" id="jVt-d2-H9o"/>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="centerY" secondItem="QQ1-Ow-B9g" secondAttribute="centerY" constant="-19.5" id="mdv-gV-uqa"/>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="trailing" secondItem="KJf-A5-KE2" secondAttribute="trailing" id="pkb-H5-E9k"/>
                             <constraint firstItem="ule-dD-q3y" firstAttribute="leading" secondItem="BLi-np-Bc4" secondAttribute="leading" id="pmX-9f-Cmy"/>
+                            <constraint firstItem="FG3-3G-bQl" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="qSR-av-WNS"/>
+                            <constraint firstItem="FG3-3G-bQl" firstAttribute="top" secondItem="Ji9-hE-IXb" secondAttribute="bottom" constant="8" symbolic="YES" id="sJy-zV-hP6"/>
+                            <constraint firstItem="Ji9-hE-IXb" firstAttribute="top" secondItem="QQ1-Ow-B9g" secondAttribute="top" constant="231" id="tAO-6M-485"/>
                             <constraint firstItem="BLi-np-Bc4" firstAttribute="top" secondItem="ule-dD-q3y" secondAttribute="bottom" constant="12" id="u8m-6v-SP4"/>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="leading" secondItem="KJf-A5-KE2" secondAttribute="leading" id="yfe-zU-lDg"/>
+                            <constraint firstItem="78Q-LX-KgH" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="xng-cq-Q86"/>
                             <constraint firstItem="yXG-73-Drl" firstAttribute="leading" secondItem="BLi-np-Bc4" secondAttribute="leading" id="ywf-Dd-6tz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageSegmentView" destination="FG3-3G-bQl" id="XM4-t0-VV0"/>
                         <outlet property="segmentView" destination="G2S-EN-ncJ" id="aOD-5m-Axx"/>
                         <outlet property="simpleSegmentView" destination="BLi-np-Bc4" id="ojf-Lz-apu"/>
                     </connections>

@@ -11,8 +11,8 @@ import BadgeSegmentControl
 
 class SegmentControlAppearence: NSObject {
     
-    class func appearence() -> SegmentAppearance {
-        let appearance = SegmentAppearance()
+    class func appearence() -> BadgeSegmentControlAppearence {
+        let appearance = BadgeSegmentControlAppearence()
         appearance.segmentOnSelectionColour = UIColor(red:1.00, 
                                                       green:0.62, 
                                                       blue:0.22, 
