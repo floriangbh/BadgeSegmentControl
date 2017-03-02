@@ -1,0 +1,6 @@
+framework module BadgeSegmentControl {
+  umbrella header "BadgeSegmentControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

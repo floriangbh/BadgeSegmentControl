@@ -1,0 +1,19 @@
+PODS:
+  - BadgeSegmentControl (0.1.0):
+    - BadgeSwift (~> 4.0)
+  - BadgeSwift (4.0.0)
+
+DEPENDENCIES:
+  - BadgeSegmentControl (from `../`)
+
+EXTERNAL SOURCES:
+  BadgeSegmentControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BadgeSegmentControl: b8083cfe079712cd17249b88b703b178ff8b89a8
+  BadgeSwift: b291cf8ca88674d61cd781f14988272988f4dff4
+
+PODFILE CHECKSUM: b845973fc92fca7113cd166dfe61e5292f75e39e
+
+COCOAPODS: 1.2.0
