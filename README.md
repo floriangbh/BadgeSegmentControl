@@ -1,17 +1,37 @@
-# BadgeSegmentControl
+<p align="center">
+    <a href="https://cocoapods.org/pods/BadgeSegmentControl" target="_blank"><img src="https://img.shields.io/cocoapods/v/BadgeSegmentControl.svg?style=flat" alt="Cocoapods version" /></a>
+    <a href="http://cocoapods.org/pods/BadgeSegmentControl" target="_blank"><img src="https://img.shields.io/cocoapods/l/BadgeSegmentControl.svg?style=flat" alt="Cocoapods licence" /></a>
+    <a href="http://cocoapods.org/pods/BadgeSegmentControl" target="_blank"><img src="https://img.shields.io/cocoapods/p/BadgeSegmentControl.svg?style=flat" alt="Cocoapods plateform" /></a>
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="Prs welcome" />
+</p>
 
-[![CI Status](http://img.shields.io/travis/terflogag/BadgeSegmentControl.svg?style=flat)](https://travis-ci.org/terflogag/BadgeSegmentControl)
-[![Version](https://img.shields.io/cocoapods/v/BadgeSegmentControl.svg?style=flat)](http://cocoapods.org/pods/BadgeSegmentControl)
-[![License](https://img.shields.io/cocoapods/l/BadgeSegmentControl.svg?style=flat)](http://cocoapods.org/pods/BadgeSegmentControl)
-[![Platform](https://img.shields.io/cocoapods/p/BadgeSegmentControl.svg?style=flat)](http://cocoapods.org/pods/BadgeSegmentControl)
+<p align="center">
+<a href="#features">Features</a>
+• <a href="#installation">Installation</a>
+• <a href="#usage">Usage</a>
+• <a href="#customisation">Customisation</a>
+• <a href="#license">License</a>
+</p>
 
-README : Building in progress... 
+Sweet segment control with image, text and badge ! Hightly customisable.
 
-## Example
+## Features 
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+- [x] Segment control with only text 
+- [x] Segment control with image and text 
+- [x] Segment control with only image
+- [x] Display badge 
+
+## Todo (feel free to make PR)
+
+- [ ] Carthage support 
+- [ ] Unit & UI Test 
 
 ## Requirements
+
+* Xcode 8 
+* iOS 9.0+ target deployment
+* Swift 3 project 
 
 ## Installation
 
@@ -22,10 +42,37 @@ it, simply add the following line to your Podfile:
 pod "BadgeSegmentControl"
 ```
 
+## Usage
+
+- Import the library : 
+
+```swift
+import BadgeSegmentControl
+```
+
+- Display the segment control : 
+
+```swift
+TODO
+```
+
+## Customisation
+
+```swift
+TODO
+```
+
+## Applications
+
+Some application already use this segment control like :
+- [Giraf](https://itunes.apple.com/fr/app/giraf/id1136592561?mt=8)
+
+What about yours ? If your application also use this library, feel free to contact me or make pull request on the README 😁
+
 ## Author
 
-terflogag, florian.gabach@gmail.com
+Florian Gabach, contact@floriangabach.fr
 
 ## License
 
-BadgeSegmentControl is available under the MIT license. See the LICENSE file for more info.
+OpenSourceController is available under the [MIT license](LICENSE).
