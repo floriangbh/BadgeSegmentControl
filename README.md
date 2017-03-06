@@ -60,10 +60,63 @@ import BadgeSegmentControl
 TODO
 ```
 
+- From the storyboard : 
+
+Just set an UIView with BadgeSegmentControl class and export to an IBOutlet.
+
 ## Customisation
 
+For customisation, I think the better way is to subclass BadgeSegmentControl like the exemple bellow :
+
 ```swift
-TODO
+import BadgeSegmentControl
+
+class MyCustomSegmentControl: BadgeSegmentControl {
+    
+    // MARK: - Appearence 
+
+    fileprivate func appearence() -> BadgeSegmentControlAppearence {
+        let appearance = BadgeSegmentControlAppearence()
+        
+        // Segment color 
+        appearance.segmentOnSelectionColour = GFAppearanceManager.whiteColor
+        appearance.segmentOffSelectionColour = GFAppearanceManager.neonCarote
+        
+        // Title font 
+        appearance.titleOnSelectionFont = UIFont.mainRegularFont(GFAppearanceManager.mainFontSize - 2)
+        appearance.titleOffSelectionFont = UIFont.mainRegularFont(GFAppearanceManager.mainFontSize - 2)
+        
+        // Title color 
+        appearance.titleOnSelectionColour = GFAppearanceManager.neonCarote
+        appearance.titleOffSelectionColour = GFAppearanceManager.whiteColor
+        
+        // Vertical margin 
+        appearance.contentVerticalMargin = 10.0
+        
+        return appearance
+    }
+    
+    func applyAppearence() {
+        // Appearence 
+        self.segmentAppearance = self.appearence()
+        
+        // Divider
+        self.dividerColour = UIColor(white: 0.95, alpha: 0.3)
+        self.dividerWidth = 1.0
+        
+        // Background
+        self.backgroundColor = UIColor.clear
+        
+        // Border 
+        self.layer.cornerRadius = 5
+        self.layer.borderColor = GFAppearanceManager.whiteColor.cgColor
+        self.layer.borderWidth = 2.0
+        
+        // Set segment with index 0 as selected by default
+        self.selectedSegmentIndex = 0
+    }
+}
+
 ```
 
 ## Applications
