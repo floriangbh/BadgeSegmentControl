@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="40" id="dda-5v-Fkl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SegmentControl with image and text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXG-73-Drl">
@@ -43,29 +43,17 @@
                                     <constraint firstAttribute="height" constant="55" id="Mf6-yP-8e6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJf-A5-KE2">
-                                <rect key="frame" x="16" y="579" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VZd-Ie-tQb"/>
-                                </constraints>
-                                <state key="normal" title="Update first badge"/>
-                                <connections>
-                                    <action selector="doUpdateFirstBadgeClick:" destination="sHR-UU-bq5" eventType="touchUpInside" id="8m1-YW-amb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-LX-KgH">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bo2-AZ-u7A"/>
-                                </constraints>
-                                <state key="normal" title="Update second badge">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="16" y="351" width="343" height="30"/>
+                                <state key="normal" title="Update first badge">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="doUpdateSecondBadgeClick:" destination="sHR-UU-bq5" eventType="touchUpInside" id="gdf-iB-O5X"/>
+                                    <action selector="doUpdateFirstBadgeClick:" destination="sHR-UU-bq5" eventType="touchUpInside" id="8m1-YW-amb"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-EN-ncJ" customClass="BadgeSegmentControl" customModule="BadgeSegmentControl">
@@ -78,7 +66,7 @@
                                     <constraint firstAttribute="height" constant="55" id="Waw-zz-Cae"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FG3-3G-bQl" customClass="BadgeSegmentControl" customModule="BadgeSegmentControl">
@@ -88,33 +76,43 @@
                                     <constraint firstAttribute="height" constant="40" id="x4a-Ib-RjW"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-LX-KgH">
+                                <rect key="frame" x="16" y="389" width="343" height="30"/>
+                                <state key="normal" title="Update second badge">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doUpdateSecondBadgeClick:" destination="sHR-UU-bq5" eventType="touchUpInside" id="gdf-iB-O5X"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.063266165554523468" green="0.82833260297775269" blue="0.86394673585891724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FG3-3G-bQl" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="0NH-5z-kvf"/>
                             <constraint firstItem="ule-dD-q3y" firstAttribute="top" secondItem="TCr-Ah-x2f" secondAttribute="bottom" id="3Xu-xL-xmo"/>
+                            <constraint firstItem="78Q-LX-KgH" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="4KY-Po-Fu0"/>
                             <constraint firstItem="BLi-np-Bc4" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="CF2-yV-4WV"/>
-                            <constraint firstItem="aQf-Cy-VWB" firstAttribute="top" secondItem="78Q-LX-KgH" secondAttribute="bottom" constant="20" id="FCD-UY-sih"/>
                             <constraint firstItem="BLi-np-Bc4" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="GAs-5l-It0"/>
                             <constraint firstItem="G2S-EN-ncJ" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="Gd0-Ox-kwr"/>
-                            <constraint firstItem="KJf-A5-KE2" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="J1t-HX-ey5"/>
                             <constraint firstItem="G2S-EN-ncJ" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="Lqy-c5-qcX"/>
                             <constraint firstItem="Ji9-hE-IXb" firstAttribute="top" secondItem="G2S-EN-ncJ" secondAttribute="bottom" constant="8" symbolic="YES" id="NEp-P8-eU8"/>
                             <constraint firstItem="yXG-73-Drl" firstAttribute="top" secondItem="BLi-np-Bc4" secondAttribute="bottom" constant="8" symbolic="YES" id="Rfh-3R-pk9"/>
                             <constraint firstItem="G2S-EN-ncJ" firstAttribute="top" secondItem="yXG-73-Drl" secondAttribute="bottom" constant="8" id="S4R-l2-uqy"/>
-                            <constraint firstItem="KJf-A5-KE2" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="T1f-Tn-UeU"/>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="top" secondItem="KJf-A5-KE2" secondAttribute="bottom" constant="8" id="X1z-aC-SCt"/>
                             <constraint firstItem="yXG-73-Drl" firstAttribute="trailing" secondItem="BLi-np-Bc4" secondAttribute="trailing" id="Z09-Ai-3lN"/>
                             <constraint firstItem="Ji9-hE-IXb" firstAttribute="leading" secondItem="FG3-3G-bQl" secondAttribute="leading" id="ZqB-Cb-u7z"/>
                             <constraint firstItem="Ji9-hE-IXb" firstAttribute="trailing" secondItem="FG3-3G-bQl" secondAttribute="trailing" id="b7V-v0-l7f"/>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="eWs-Zj-Msf"/>
+                            <constraint firstItem="78Q-LX-KgH" firstAttribute="top" secondItem="KJf-A5-KE2" secondAttribute="bottom" constant="8" id="f1C-Vb-22P"/>
                             <constraint firstItem="ule-dD-q3y" firstAttribute="trailing" secondItem="BLi-np-Bc4" secondAttribute="trailing" id="jVt-d2-H9o"/>
+                            <constraint firstItem="KJf-A5-KE2" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="kz3-Zk-ItD"/>
+                            <constraint firstItem="78Q-LX-KgH" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="pfL-4D-JYb"/>
                             <constraint firstItem="ule-dD-q3y" firstAttribute="leading" secondItem="BLi-np-Bc4" secondAttribute="leading" id="pmX-9f-Cmy"/>
                             <constraint firstItem="FG3-3G-bQl" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="qSR-av-WNS"/>
+                            <constraint firstItem="KJf-A5-KE2" firstAttribute="trailing" secondItem="QQ1-Ow-B9g" secondAttribute="trailingMargin" id="qbt-gU-qxe"/>
+                            <constraint firstItem="KJf-A5-KE2" firstAttribute="top" secondItem="FG3-3G-bQl" secondAttribute="bottom" constant="17" id="sEv-vV-ZwV"/>
                             <constraint firstItem="FG3-3G-bQl" firstAttribute="top" secondItem="Ji9-hE-IXb" secondAttribute="bottom" constant="8" symbolic="YES" id="sJy-zV-hP6"/>
                             <constraint firstItem="Ji9-hE-IXb" firstAttribute="top" secondItem="QQ1-Ow-B9g" secondAttribute="top" constant="231" id="tAO-6M-485"/>
                             <constraint firstItem="BLi-np-Bc4" firstAttribute="top" secondItem="ule-dD-q3y" secondAttribute="bottom" constant="12" id="u8m-6v-SP4"/>
-                            <constraint firstItem="78Q-LX-KgH" firstAttribute="leading" secondItem="QQ1-Ow-B9g" secondAttribute="leadingMargin" id="xng-cq-Q86"/>
                             <constraint firstItem="yXG-73-Drl" firstAttribute="leading" secondItem="BLi-np-Bc4" secondAttribute="leading" id="ywf-Dd-6tz"/>
                         </constraints>
                     </view>

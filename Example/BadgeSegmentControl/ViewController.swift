@@ -19,15 +19,19 @@ class ViewController: UIViewController {
     
     // MARK: - Var
     
+    fileprivate let mainColor = UIColor(red:1.00, green:0.62, blue:0.22, alpha:1.00)
     var margin: CGFloat = 10.0
     var firstBadgeValue: Int = 0
     var secondBadgeValue: Int = 0
     
     // MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Background color
+        self.view.backgroundColor = self.mainColor
+        
         // Prepare two segment for demo 
         self.prepareTextAndImageSegment()
         self.prepareSimpleSegment()
@@ -49,16 +53,15 @@ class ViewController: UIViewController {
         self.simpleSegmentView.backgroundColor = UIColor.clear
         
         self.simpleSegmentView.layer.cornerRadius = 5.0
-        self.simpleSegmentView.layer.borderColor = UIColor(white: 0.85, 
-                                                     alpha: 1.0).cgColor
-        self.simpleSegmentView.layer.borderWidth = 1.0
+        self.simpleSegmentView.layer.borderColor = UIColor.white.cgColor
+        self.simpleSegmentView.layer.borderWidth = 2.0
         
         // Add segments
         self.simpleSegmentView.addSegmentWithTitle("Emojiraf")
-        self.simpleSegmentView.addSegmentWithTitle("Messagerie")
+        self.simpleSegmentView.addSegmentWithTitle("Messages")
         
         self.simpleSegmentView.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)), 
-                                   for: .valueChanged)
+                                         for: .valueChanged)
         
         // Set segment with index 0 as selected by default
         self.simpleSegmentView.selectedSegmentIndex = 0
@@ -72,17 +75,16 @@ class ViewController: UIViewController {
         self.segmentView.backgroundColor = UIColor.clear
         
         self.segmentView.layer.cornerRadius = 5.0
-        self.segmentView.layer.borderColor = UIColor(white: 0.85, 
-                                                     alpha: 1.0).cgColor
-        self.segmentView.layer.borderWidth = 1.0
+        self.segmentView.layer.borderColor = UIColor.white.cgColor
+        self.segmentView.layer.borderWidth = 2.0
         
         // Add segments
         self.segmentView.addSegmentWithTitle("Emojiraf", 
-                                             onSelectionImage: UIImage(named: "clip_light"), 
-                                             offSelectionImage: UIImage(named: "clip"))
-        self.segmentView.addSegmentWithTitle("Messagerie", 
-                                             onSelectionImage: UIImage(named: "bulb_light"), 
-                                             offSelectionImage: UIImage(named: "bulb"))
+                                             onSelectionImage: UIImage(named: "emoji")?.imageWithColor(self.mainColor), 
+                                             offSelectionImage: UIImage(named: "emoji")?.imageWithColor(UIColor.white))
+        self.segmentView.addSegmentWithTitle("Messages", 
+                                             onSelectionImage: UIImage(named: "message")?.imageWithColor(self.mainColor), 
+                                             offSelectionImage: UIImage(named: "message")?.imageWithColor(UIColor.white))
         
         self.segmentView.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)), 
                                    for: .valueChanged)
@@ -99,20 +101,19 @@ class ViewController: UIViewController {
         self.imageSegmentView.backgroundColor = UIColor.clear
         
         self.imageSegmentView.layer.cornerRadius = 5.0
-        self.imageSegmentView.layer.borderColor = UIColor(white: 0.85, 
-                                                     alpha: 1.0).cgColor
-        self.imageSegmentView.layer.borderWidth = 1.0
+        self.imageSegmentView.layer.borderColor = UIColor.white.cgColor
+        self.imageSegmentView.layer.borderWidth = 2.0
         
         // Add segments
         self.imageSegmentView.addSegmentWithTitle(nil, 
-                                             onSelectionImage: UIImage(named: "clip_light"), 
-                                             offSelectionImage: UIImage(named: "clip"))
+                                                  onSelectionImage: UIImage(named: "emoji")?.imageWithColor(self.mainColor), 
+                                                  offSelectionImage: UIImage(named: "emoji")?.imageWithColor(UIColor.white))
         self.imageSegmentView.addSegmentWithTitle(nil, 
-                                             onSelectionImage: UIImage(named: "bulb_light"), 
-                                             offSelectionImage: UIImage(named: "bulb"))
+                                                  onSelectionImage: UIImage(named: "message")?.imageWithColor(self.mainColor), 
+                                                  offSelectionImage: UIImage(named: "message")?.imageWithColor(UIColor.white))
         
         self.imageSegmentView.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)), 
-                                   for: .valueChanged)
+                                        for: .valueChanged)
         
         // Set segment with index 0 as selected by default
         self.imageSegmentView.selectedSegmentIndex = 0
@@ -131,10 +132,10 @@ class ViewController: UIViewController {
                                      andSection: 0)
         
         self.imageSegmentView.updateBadge(forValue: self.firstBadgeValue, 
-                                     andSection: 0)
+                                          andSection: 0)
         
         self.simpleSegmentView.updateBadge(forValue: self.firstBadgeValue, 
-                                     andSection: 0)
+                                           andSection: 0)
     }
     
     @IBAction func doUpdateSecondBadgeClick(_ sender: Any) {
@@ -143,10 +144,10 @@ class ViewController: UIViewController {
                                      andSection: 1)
         
         self.imageSegmentView.updateBadge(forValue: self.secondBadgeValue, 
-                                     andSection: 1)
+                                          andSection: 1)
         
         self.simpleSegmentView.updateBadge(forValue: self.secondBadgeValue, 
-                                     andSection: 1)
+                                           andSection: 1)
     }
 }
 
