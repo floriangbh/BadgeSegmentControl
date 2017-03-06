@@ -16,7 +16,7 @@
 Sweet segment control with image, text and badge ! Hightly customisable.
 
 <p align="center">
-    <img src="https://github.com/terflogag/BadgeSegmentControl/blob/master/Ressources/screen.png" alt="Screen" width="50%" height="50%"/>
+    <img src="https://github.com/terflogag/BadgeSegmentControl/blob/master/Ressources/screen.png" alt="Screen"/>
 </p>
 
 ## Features 
