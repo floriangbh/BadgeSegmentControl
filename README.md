@@ -77,41 +77,42 @@ class MyCustomSegmentControl: BadgeSegmentControl {
 
     fileprivate func appearence() -> BadgeSegmentControlAppearence {
         let appearance = BadgeSegmentControlAppearence()
-        
+
         // Segment color 
-        appearance.segmentOnSelectionColour = GFAppearanceManager.whiteColor
-        appearance.segmentOffSelectionColour = GFAppearanceManager.neonCarote
-        
+        appearance.segmentOnSelectionColour = UIColor.white
+        appearance.segmentOffSelectionColour = UIColor.red
+        appearance.segmentTouchDownColour = UIColor.white.withAlphaComponent(0.4)
+
         // Title font 
-        appearance.titleOnSelectionFont = UIFont.mainRegularFont(GFAppearanceManager.mainFontSize - 2)
-        appearance.titleOffSelectionFont = UIFont.mainRegularFont(GFAppearanceManager.mainFontSize - 2)
-        
+        appearance.titleOnSelectionFont = <font>
+        appearance.titleOffSelectionFont = <font>
+
         // Title color 
-        appearance.titleOnSelectionColour = GFAppearanceManager.neonCarote
-        appearance.titleOffSelectionColour = GFAppearanceManager.whiteColor
-        
+        appearance.titleOnSelectionColour = UIColor.red
+        appearance.titleOffSelectionColour = UIColor.white
+
         // Vertical margin 
         appearance.contentVerticalMargin = 10.0
-        
+
         return appearance
     }
-    
+
     func applyAppearence() {
         // Appearence 
         self.segmentAppearance = self.appearence()
-        
+
         // Divider
         self.dividerColour = UIColor(white: 0.95, alpha: 0.3)
         self.dividerWidth = 1.0
-        
+
         // Background
         self.backgroundColor = UIColor.clear
-        
+
         // Border 
         self.layer.cornerRadius = 5
-        self.layer.borderColor = GFAppearanceManager.whiteColor.cgColor
+        self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 2.0
-        
+
         // Set segment with index 0 as selected by default
         self.selectedSegmentIndex = 0
     }
