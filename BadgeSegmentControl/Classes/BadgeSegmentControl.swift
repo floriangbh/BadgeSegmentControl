@@ -215,7 +215,7 @@ open class BadgeSegmentControl: UIControl {
         context.restoreGState()
     }
 
-    // MARK: - Badge 
+    // MARK: - Manage badge 
 
     open func updateBadge(forValue value: Int, andSection section: Int) {
         self.segments[section].updateBadgeValue(forValue: value)
