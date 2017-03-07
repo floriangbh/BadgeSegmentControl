@@ -8,22 +8,22 @@
 
 import UIKit
 
-open class BadgeSegmentControl: UIControl {
+public class BadgeSegmentControl: UIControl {
 
-    open var segmentAppearance: BadgeSegmentControlAppearence?
+    public var segmentAppearance: BadgeSegmentControlAppearence?
 
-    open var dividerColour: UIColor = UIColor.lightGray {
+    public var dividerColour: UIColor = UIColor.lightGray {
         didSet {
             self.setNeedsDisplay()
         }
     }
-    open var dividerWidth: CGFloat = 1.0 {
+    public var dividerWidth: CGFloat = 1.0 {
         didSet {
             self.updateSegmentsLayout()
         }
     }
 
-    open var selectedSegmentIndex: Int {
+    public var selectedSegmentIndex: Int {
         get {
             if let segment = self.selectedSegment {
                 return segment.index
@@ -40,13 +40,14 @@ open class BadgeSegmentControl: UIControl {
         }
     }
 
-    open var numberOfSegments: Int {
+    public var numberOfSegments: Int {
         get {
             return segments.count
         }
     }
 
     fileprivate var segments: [BadgeSegmentControlView] = []
+
     fileprivate var selectedSegment: BadgeSegmentControlView?
 
     // MARK: - Lifecycle
@@ -94,19 +95,19 @@ open class BadgeSegmentControl: UIControl {
 
     // MARK: - Manage Segment
 
-    open func addSegmentWithTitle(_ title: String?,
-                                  onSelectionImage: UIImage? = nil,
-                                  offSelectionImage: UIImage? = nil) {
+    public func addSegmentWithTitle(_ title: String,
+                                    onSelectionImage: UIImage? = nil,
+                                    offSelectionImage: UIImage? = nil) {
         self.insertSegmentWithTitle(title,
                                     onSelectionImage: onSelectionImage,
                                     offSelectionImage: offSelectionImage,
                                     index: self.segments.count)
     }
 
-    open func insertSegmentWithTitle(_ title: String?,
-                                     onSelectionImage: UIImage?,
-                                     offSelectionImage: UIImage?,
-                                     index: Int) {
+    public func insertSegmentWithTitle(_ title: String?,
+                                       onSelectionImage: UIImage?,
+                                       offSelectionImage: UIImage?,
+                                       index: Int) {
 
         let segment = BadgeSegmentControlView(appearance: self.segmentAppearance)
 
@@ -129,7 +130,7 @@ open class BadgeSegmentControl: UIControl {
         self.layoutSubviews()
     }
 
-    open func removeSegmentAtIndex(_ index: Int) {
+    public func removeSegmentAtIndex(_ index: Int) {
         assert(index >= 0 && index < self.segments.count, "Index (\(index)) is out of range")
 
         if index == self.selectedSegmentIndex {
@@ -152,7 +153,7 @@ open class BadgeSegmentControl: UIControl {
 
     // MARK: - Layout 
 
-    open override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         self.updateSegmentsLayout()
     }
@@ -217,7 +218,7 @@ open class BadgeSegmentControl: UIControl {
 
     // MARK: - Manage badge 
 
-    open func updateBadge(forValue value: Int, andSection section: Int) {
+    public func updateBadge(forValue value: Int, andSection section: Int) {
         self.segments[section].updateBadgeValue(forValue: value)
     }
 }

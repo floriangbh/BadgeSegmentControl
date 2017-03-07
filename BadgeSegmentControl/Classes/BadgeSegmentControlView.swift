@@ -15,11 +15,13 @@ open class BadgeSegmentControlView: UIView {
 
     // UI components
     fileprivate var imageView: UIImageView = UIImageView()
+
     fileprivate var label: UILabel = UILabel()
+
     fileprivate var badge: BadgeSwift = BadgeSwift()
 
     // Title
-    open var title: String? {
+    public var title: String? {
         didSet {
             DispatchQueue.main.async(execute: {
                 self.label.text = self.title
@@ -30,6 +32,7 @@ open class BadgeSegmentControlView: UIView {
 
     // Image
     open var onSelectionImage: UIImage?
+
     open var offSelectionImage: UIImage?
 
     // Appearance
@@ -37,8 +40,9 @@ open class BadgeSegmentControlView: UIView {
 
     internal var didSelectSegment: ((_ segment: BadgeSegmentControlView) -> Void)?
 
-    open internal(set) var index: Int = 0
-    open fileprivate(set) var isSelected: Bool = false
+    public var index: Int = 0
+
+    public var isSelected: Bool = false
 
     // MARK: - Lifecycle
 
