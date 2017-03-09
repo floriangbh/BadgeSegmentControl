@@ -70,6 +70,7 @@ open class BadgeSegmentControlView: UIView {
 
         // Add badge
         self.addSubview(self.badge)
+        self.badge.isHidden = true
     }
 
     internal func setupUIElements() {
