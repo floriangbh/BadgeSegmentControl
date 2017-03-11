@@ -29,9 +29,9 @@ class ViewController: UIViewController {
 
     fileprivate var programaticallySegmentedControl: BadgeSegmentControl?
     
-    fileprivate let firstSegmentName = "First"
+    fileprivate let firstSegmentName = "Emojiraf"
     
-    fileprivate let secondSegmentName =  "Second"
+    fileprivate let secondSegmentName =  "Messages"
 
     // MARK: - Lifecycle
 
@@ -109,10 +109,11 @@ class ViewController: UIViewController {
     }
 
     func addWithoutStoryboard() {
-        self.programaticallySegmentedControl = BadgeSegmentControl(frame: CGRect(x: self.view.frame.width / 2 - ((self.view.frame.width - 50) / 2),
-                                                                                 y: self.view.frame.height - 80,
-                                                                                 width: self.view.frame.width - 50,
-                                                                                 height: 50))
+        let padding: CGFloat = 50
+        self.programaticallySegmentedControl = BadgeSegmentControl(frame: CGRect(x: padding / 2,
+                                                                                 y: self.view.frame.height - (padding * 2),
+                                                                                 width: self.view.frame.width - padding,
+                                                                                 height: padding))
         self.programaticallySegmentedControl?.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments

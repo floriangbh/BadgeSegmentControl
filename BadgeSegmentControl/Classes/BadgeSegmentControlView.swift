@@ -106,14 +106,14 @@ open class BadgeSegmentControlView: UIView {
 
         // Image view
         var imageViewFrame = CGRect(x: 0.0,
-                                    y: verticalMargin / 2,
+                                    y: verticalMargin / 1.5,
                                     width: 0.0,
-                                    height: self.frame.size.height - verticalMargin)
+                                    height: self.frame.size.height - (verticalMargin * 1.5))
 
         if self.onSelectionImage != nil || self.offSelectionImage != nil {
             // Set imageView as a square
-            imageViewFrame.size.width = self.frame.size.height - verticalMargin
-            distanceBetween = 5.0
+            imageViewFrame.size.width = self.frame.size.height - (verticalMargin * 1.5)
+            distanceBetween = 8.0
         }
 
         // If there's no text, align image in the centre
@@ -136,7 +136,9 @@ open class BadgeSegmentControlView: UIView {
                                   height: self.frame.size.height - verticalMargin * 2)
 
         // Badge 
-        self.badge.frame.origin.x = self.frame.size.width - self.badge.frame.width - 10
+        self.badge.frame.origin.x = self.frame.size.width - 
+            self.badge.frame.width - 
+            (self.appearance?.borderWidth ?? 0) - 1
         self.positionBadge()
     }
 
