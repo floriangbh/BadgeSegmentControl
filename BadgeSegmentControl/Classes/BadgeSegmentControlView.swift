@@ -46,12 +46,13 @@ open class BadgeSegmentControlView: UIView {
 
     // MARK: - Lifecycle
 
-    // Init
     internal init(appearance: BadgeSegmentControlAppearence?) {
+        super.init(frame: CGRect.zero)
 
+        // Apperence 
         self.appearance = appearance
 
-        super.init(frame: CGRect.zero)
+        // Prepare all element
         self.addUIElementsToView()
     }
 
@@ -59,6 +60,9 @@ open class BadgeSegmentControlView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Prepare
+
+    /// Add all element into the view
     fileprivate func addUIElementsToView() {
         // Add ImageView
         self.imageView.contentMode = UIViewContentMode.scaleAspectFit
@@ -73,13 +77,14 @@ open class BadgeSegmentControlView: UIView {
         self.badge.isHidden = true
     }
 
+    /// Prepare all element appearence (badge, label, badge)
     internal func setupUIElements() {
         DispatchQueue.main.async(execute: {
             if let appearance = self.appearance {
                 self.backgroundColor = appearance.segmentOffSelectionColour
                 self.label.font = appearance.titleOffSelectionFont
                 self.label.textColor = appearance.titleOffSelectionColour
-                self.configureBadge(self.badge)
+                self.configureBadge()
                 self.updateBadgeValue(forValue: 0)
             }
             self.imageView.image = self.offSelectionImage
@@ -88,6 +93,7 @@ open class BadgeSegmentControlView: UIView {
 
     // MARK: - Layout 
 
+    /// Apply layout to the view
     open override func layoutSubviews() {
         super.layoutSubviews()
 
@@ -98,6 +104,7 @@ open class BadgeSegmentControlView: UIView {
             verticalMargin = appearance.contentVerticalMargin
         }
 
+        // Image view
         var imageViewFrame = CGRect(x: 0.0,
                                     y: verticalMargin / 2,
                                     width: 0.0,
@@ -120,29 +127,35 @@ open class BadgeSegmentControlView: UIView {
             imageViewFrame.origin.x = max((self.frame.size.width - imageWidth - labelWidht) / 2.0 - distanceBetween,
                                           0.0)
         }
-
         self.imageView.frame = imageViewFrame
+
+        // Label 
         self.label.frame = CGRect(x: imageViewFrame.origin.x + imageViewFrame.size.width + distanceBetween,
                                   y: verticalMargin,
                                   width: self.label.frame.size.width,
                                   height: self.frame.size.height - verticalMargin * 2)
 
-        // Badge position
+        // Badge 
         self.badge.frame.origin.x = self.frame.size.width - self.badge.frame.width - 10
-        self.positionBadge(self.badge)
+        self.positionBadge()
     }
 
     // MARK: Selections
 
+    /// Set selected style 
+    ///
+    /// - Parameter selected: bool for selection state 
     internal func setSelected(_ selected: Bool) {
         self.isSelected = selected
         if selected == true {
+            // Selected style 
             DispatchQueue.main.async(execute: {
                 self.backgroundColor = self.appearance?.segmentOnSelectionColour
                 self.label.textColor = self.appearance?.titleOnSelectionColour
                 self.imageView.image = self.onSelectionImage
             })
         } else {
+            // Unselected style
             DispatchQueue.main.async(execute: {
                 self.backgroundColor = self.appearance?.segmentOffSelectionColour
                 self.label.textColor = self.appearance?.titleOffSelectionColour
@@ -153,27 +166,42 @@ open class BadgeSegmentControlView: UIView {
 
     // MARK: Handle touch
 
-    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    /// When user start touch the segment view
+    ///
+    /// - Parameters:
+    ///   - touches: touchs set 
+    ///   - event: event reference
+    override open func touchesBegan(_ touches: Set<UITouch>,
+                                    with event: UIEvent?) {
         if self.isSelected == false {
+            // Apply selection style 
             self.backgroundColor = self.appearance?.segmentTouchDownColour
         }
     }
 
-    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    /// When user release the segment view
+    ///
+    /// - Parameters:
+    ///   - touches: touchs set 
+    ///   - event: event reference
+    override open func touchesEnded(_ touches: Set<UITouch>,
+                                    with event: UIEvent?) {
         if self.isSelected == false {
+            // Apply normal style
             self.didSelectSegment?(self)
         }
     }
 
     // MARK: - Badge
 
-    private func positionBadge(_ badge: UIView) {
+    /// Adjuste badge position into the view
+    private func positionBadge() {
         badge.translatesAutoresizingMaskIntoConstraints = false
         var constraints = [NSLayoutConstraint]()
 
         // Center the badge vertically in its container
         constraints.append(NSLayoutConstraint(
-            item: badge,
+            item: self.badge,
             attribute: NSLayoutAttribute.centerY,
             relatedBy: NSLayoutRelation.equal,
             toItem: self,
@@ -185,26 +213,34 @@ open class BadgeSegmentControlView: UIView {
         self.addConstraints(constraints)
     }
 
-    private func configureBadge(_ badge: BadgeSwift) {
+    /// Configure badge style, red by default 
+    private func configureBadge() {
         // Font
-        badge.font = UIFont.systemFont(ofSize: 11)
+        self.badge.font = UIFont.systemFont(ofSize: 11)
 
         // Insets
-        badge.insets = CGSize(width: 5, height: 5)
+        self.badge.insets = CGSize(width: 5, height: 5)
 
         // Text color
-        badge.textColor = UIColor.white
+        self.badge.textColor = UIColor.white
 
         // Badge color
-        badge.badgeColor = UIColor.red
+        self.badge.badgeColor = UIColor.red
 
         // No shadow
-        badge.shadowOpacityBadge = 0
+        self.badge.shadowOpacityBadge = 0
 
         // Border width and color
-        badge.borderWidth = 0.0
+        self.badge.borderWidth = 0.0
     }
 
+    /// Update the badge value 
+    /// Depend on value : 
+    /// - <= 0, hide the badge 
+    /// - > 0 && <= 99 : display the badge 
+    /// - > 99 : display "+99"
+    ///
+    /// - Parameter value: the value to set 
     func updateBadgeValue(forValue value: Int) {
         if value > 0 && value <= 99 {
             // Badge between 1 and 99

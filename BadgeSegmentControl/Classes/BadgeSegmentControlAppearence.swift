@@ -24,7 +24,7 @@ open class BadgeSegmentControlAppearence {
 
     open var contentVerticalMargin: CGFloat
 
-    // MARK: - Init
+    // MARK: - Lifecycle
 
     public init() {
         // Segment style initialization 
@@ -40,29 +40,5 @@ open class BadgeSegmentControlAppearence {
 
         // Margin initialization
         self.contentVerticalMargin = 5.0
-    }
-
-    public init(contentVerticalMargin: CGFloat,
-                segmentOnSelectionColour: UIColor,
-                segmentOffSelectionColour: UIColor,
-                titleOnSelectionColour: UIColor,
-                segmentTouchDownColour: UIColor,
-                titleOffSelectionColour: UIColor,
-                titleOnSelectionFont: UIFont,
-                titleOffSelectionFont: UIFont) {
-
-        // Margin 
-        self.contentVerticalMargin = contentVerticalMargin
-
-        // Segment style 
-        self.segmentOnSelectionColour = segmentOnSelectionColour
-        self.segmentOffSelectionColour = segmentOffSelectionColour
-        self.segmentTouchDownColour = segmentTouchDownColour
-
-        // Title style
-        self.titleOnSelectionColour = titleOnSelectionColour
-        self.titleOffSelectionColour = titleOffSelectionColour
-        self.titleOnSelectionFont = titleOnSelectionFont
-        self.titleOffSelectionFont = titleOffSelectionFont
     }
 }

@@ -14,15 +14,20 @@ class ViewController: UIViewController {
     // MARK : - IBOutlet
 
     @IBOutlet weak var segmentView: BadgeSegmentControl!
+
     @IBOutlet weak var simpleSegmentView: BadgeSegmentControl!
+
     @IBOutlet weak var imageSegmentView: BadgeSegmentControl!
 
     // MARK: - Var
 
     fileprivate let mainColor = UIColor(red:1.00, green:0.62, blue:0.22, alpha:1.00)
-    var margin: CGFloat = 10.0
-    var firstBadgeValue: Int = 0
-    var secondBadgeValue: Int = 0
+
+    fileprivate var firstBadgeValue: Int = 0
+
+    fileprivate var secondBadgeValue: Int = 0
+
+    fileprivate var programaticallySegmentedControl: BadgeSegmentControl?
 
     // MARK: - Lifecycle
 
@@ -36,6 +41,7 @@ class ViewController: UIViewController {
         self.prepareTextAndImageSegment()
         self.prepareSimpleSegment()
         self.prepareOnlyImageSegment()
+        self.addWithoutStoryboard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,9 +125,35 @@ class ViewController: UIViewController {
         self.imageSegmentView.selectedSegmentIndex = 0
     }
 
-    // Segment selector for .ValueChanged
-    func selectSegmentInSegmentView(segmentView: BadgeSegmentControl) {
-        print("Select segment at index: \(segmentView.selectedSegmentIndex)")
+    func addWithoutStoryboard() {
+        self.programaticallySegmentedControl = BadgeSegmentControl(frame: CGRect(x: self.view.frame.width / 2 - ((self.view.frame.width - 50) / 2),
+                                                                                 y: self.view.frame.height - 80,
+                                                                                 width: self.view.frame.width - 50,
+                                                                                 height: 50))
+        self.programaticallySegmentedControl?.segmentAppearance = SegmentControlAppearence.appearence()
+        self.programaticallySegmentedControl?.dividerColour = UIColor(white: 0.95, alpha: 0.3)
+        self.programaticallySegmentedControl?.dividerWidth = 1.0
+        self.programaticallySegmentedControl?.backgroundColor = UIColor.clear
+
+        self.programaticallySegmentedControl?.layer.cornerRadius = 5.0
+        self.programaticallySegmentedControl?.layer.borderColor = UIColor.white.cgColor
+        self.programaticallySegmentedControl?.layer.borderWidth = 2.0
+
+        // Add segments
+        self.programaticallySegmentedControl?.addSegmentWithTitle("Emojiraf")
+        self.programaticallySegmentedControl?.addSegmentWithTitle("Messages")
+
+        self.programaticallySegmentedControl?.addTarget(self,
+                                                       action: #selector(selectSegmentInSegmentView(segmentView:)),
+                                                       for: .valueChanged)
+
+        // Set segment with index 0 as selected by default
+        self.programaticallySegmentedControl?.selectedSegmentIndex = 0
+
+        // Add to subview
+        if let segmentControl = self.programaticallySegmentedControl {
+            self.view.addSubview(segmentControl)
+        }
     }
 
     // MARK: - Action 
@@ -148,5 +180,10 @@ class ViewController: UIViewController {
 
         self.simpleSegmentView.updateBadge(forValue: self.secondBadgeValue,
                                            andSection: 1)
+    }
+
+    // Segment selector for .ValueChanged
+    func selectSegmentInSegmentView(segmentView: BadgeSegmentControl) {
+        print("Select segment at index: \(segmentView.selectedSegmentIndex)")
     }
 }

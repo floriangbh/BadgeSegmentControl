@@ -17,6 +17,7 @@ public class BadgeSegmentControl: UIControl {
             self.setNeedsDisplay()
         }
     }
+    
     public var dividerWidth: CGFloat = 1.0 {
         didSet {
             self.updateSegmentsLayout()
