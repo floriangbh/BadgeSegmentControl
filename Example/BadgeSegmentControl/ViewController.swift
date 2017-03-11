@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     fileprivate var secondBadgeValue: Int = 0
 
     fileprivate var programaticallySegmentedControl: BadgeSegmentControl?
-    
+
     fileprivate let firstSegmentName = "Emojiraf"
-    
+
     fileprivate let secondSegmentName =  "Messages"
 
     // MARK: - Lifecycle

@@ -136,8 +136,8 @@ open class BadgeSegmentControlView: UIView {
                                   height: self.frame.size.height - verticalMargin * 2)
 
         // Badge 
-        self.badge.frame.origin.x = self.frame.size.width - 
-            self.badge.frame.width - 
+        self.badge.frame.origin.x = self.frame.size.width -
+            self.badge.frame.width -
             (self.appearance?.borderWidth ?? 0) - 1
         self.positionBadge()
     }
