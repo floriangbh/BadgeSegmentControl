@@ -10,25 +10,25 @@ import UIKit
 
 open class BadgeSegmentControl: UIControl {
 
-    open var segmentAppearance: BadgeSegmentControlAppearance? {
+    public var segmentAppearance: BadgeSegmentControlAppearance? {
         didSet {
             self.applyAppearence()
         }
     }
 
-    open var dividerColour: UIColor = UIColor.lightGray {
+    public var dividerColour: UIColor = UIColor.lightGray {
         didSet {
             self.setNeedsDisplay()
         }
     }
 
-    open var dividerWidth: CGFloat = 1.0 {
+    public var dividerWidth: CGFloat = 1.0 {
         didSet {
             self.updateSegmentsLayout()
         }
     }
 
-    open var selectedSegmentIndex: Int {
+    public var selectedSegmentIndex: Int {
         get {
             if let segment = self.selectedSegment {
                 return segment.index
@@ -45,7 +45,7 @@ open class BadgeSegmentControl: UIControl {
         }
     }
 
-    open var numberOfSegments: Int {
+    public var numberOfSegments: Int {
         get {
             return segments.count
         }
