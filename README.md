@@ -36,6 +36,7 @@ Sweet segment control with image, text and badge ! Hightly customisable.
 * Xcode 8 
 * iOS 9.0+ target deployment
 * Swift 3 project 
+* Dependency with [SwiftBadge](https://github.com/marketplacer/swift-badge)
 
 ## Installation
 
@@ -135,4 +136,4 @@ Florian Gabach, contact@floriangabach.fr
 
 OpenSourceController is available under the [MIT license](LICENSE).
 
-If your application use this picker consider to add the licence in your Credits/About section. You can use [this library to do it](https://github.com/terflogag/OpenSourceController).
+If your application use this segment control consider to add the licence in your Credits/About section. You can use [this library to do it](https://github.com/terflogag/OpenSourceController).
