@@ -58,7 +58,7 @@ import BadgeSegmentControl
 - Display the segment control programmatically : 
 
 ```swift
-func addWithoutStoryboard() {
+func addSegmentControl() {
     let padding: CGFloat = 50
     let mySegmentControl = BadgeSegmentControl(frame: CGRect(x: padding / 2,
                                                                y: self.view.frame.height - (padding * 2),
