@@ -8,27 +8,27 @@
 
 import UIKit
 
-public class BadgeSegmentControl: UIControl {
+open class BadgeSegmentControl: UIControl {
 
-    public var segmentAppearance: BadgeSegmentControlAppearance? {
+    open var segmentAppearance: BadgeSegmentControlAppearance? {
         didSet {
             self.applyAppearence()
         }
     }
 
-    public var dividerColour: UIColor = UIColor.lightGray {
+    open var dividerColour: UIColor = UIColor.lightGray {
         didSet {
             self.setNeedsDisplay()
         }
     }
 
-    public var dividerWidth: CGFloat = 1.0 {
+    open var dividerWidth: CGFloat = 1.0 {
         didSet {
             self.updateSegmentsLayout()
         }
     }
 
-    public var selectedSegmentIndex: Int {
+    open var selectedSegmentIndex: Int {
         get {
             if let segment = self.selectedSegment {
                 return segment.index
@@ -45,7 +45,7 @@ public class BadgeSegmentControl: UIControl {
         }
     }
 
-    public var numberOfSegments: Int {
+    open var numberOfSegments: Int {
         get {
             return segments.count
         }
