@@ -9,10 +9,10 @@
 import Foundation
 import BadgeSegmentControl
 
-class SegmentControlAppearence: NSObject {
+class SegmentControlAppearance: NSObject {
 
-    class func appearence() -> BadgeSegmentControlAppearence {
-        let appearance = BadgeSegmentControlAppearence()
+    class func appearance() -> BadgeSegmentControlAppearance {
+        let appearance = BadgeSegmentControlAppearance()
 
         // Segment color 
         appearance.segmentOnSelectionColour = UIColor.white
@@ -29,7 +29,15 @@ class SegmentControlAppearence: NSObject {
         // Vertical margin 
         appearance.contentVerticalMargin = 10.0
 
-        return appearance
+        // Border style
+        appearance.borderColor = UIColor.white
+        appearance.cornerRadius = 5.0
+        appearance.borderWidth = 2.0
 
+        // Divider style
+        appearance.dividerWidth = 1.0
+        appearance.dividerColour = UIColor(white: 0.95, alpha: 0.3)
+
+        return appearance
     }
 }

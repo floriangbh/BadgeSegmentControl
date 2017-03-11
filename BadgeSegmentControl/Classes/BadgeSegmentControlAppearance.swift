@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class BadgeSegmentControlAppearence {
+open class BadgeSegmentControlAppearance {
 
     // MARK: - Var 
 
@@ -24,8 +24,18 @@ open class BadgeSegmentControlAppearence {
 
     open var contentVerticalMargin: CGFloat
 
+    open var dividerWidth: CGFloat
+    open var dividerColour: UIColor
+
+    open var cornerRadius: CGFloat
+    open var borderWidth: CGFloat
+    open var borderColor: UIColor
+
+    open var backgroundColor: UIColor
+
     // MARK: - Lifecycle
 
+    /// Default init for appearance
     public init() {
         // Segment style initialization 
         self.segmentOnSelectionColour = UIColor.darkGray
@@ -40,5 +50,17 @@ open class BadgeSegmentControlAppearence {
 
         // Margin initialization
         self.contentVerticalMargin = 5.0
+
+        // Divider 
+        self.dividerWidth = 1.0
+        self.dividerColour = UIColor.black
+
+        // Border 
+        self.cornerRadius = 3.0
+        self.borderWidth = 2.0
+        self.borderColor = UIColor.black
+
+        // Background 
+        self.backgroundColor = UIColor.clear
     }
 }

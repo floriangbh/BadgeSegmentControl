@@ -53,14 +53,7 @@ class ViewController: UIViewController {
 
     /// Prepare the first segment without image and badge 
     func prepareSimpleSegment() {
-        self.simpleSegmentView.segmentAppearance = SegmentControlAppearence.appearence()
-        self.simpleSegmentView.dividerColour = UIColor(white: 0.95, alpha: 0.3)
-        self.simpleSegmentView.dividerWidth = 1.0
-        self.simpleSegmentView.backgroundColor = UIColor.clear
-
-        self.simpleSegmentView.layer.cornerRadius = 5.0
-        self.simpleSegmentView.layer.borderColor = UIColor.white.cgColor
-        self.simpleSegmentView.layer.borderWidth = 2.0
+        self.simpleSegmentView.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
         self.simpleSegmentView.addSegmentWithTitle("Emojiraf")
@@ -75,14 +68,7 @@ class ViewController: UIViewController {
 
     /// Prepare the second segment with image and badge 
     func prepareTextAndImageSegment() {
-        self.segmentView.segmentAppearance = SegmentControlAppearence.appearence()
-        self.segmentView.dividerColour = UIColor(white: 0.95, alpha: 0.3)
-        self.segmentView.dividerWidth = 1.0
-        self.segmentView.backgroundColor = UIColor.clear
-
-        self.segmentView.layer.cornerRadius = 5.0
-        self.segmentView.layer.borderColor = UIColor.white.cgColor
-        self.segmentView.layer.borderWidth = 2.0
+        self.segmentView.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
         self.segmentView.addSegmentWithTitle("Emojiraf",
@@ -101,14 +87,7 @@ class ViewController: UIViewController {
 
     /// Prepare the second segment with image and badge 
     func prepareOnlyImageSegment() {
-        self.imageSegmentView.segmentAppearance = SegmentControlAppearence.appearence()
-        self.imageSegmentView.dividerColour = UIColor(white: 0.95, alpha: 0.3)
-        self.imageSegmentView.dividerWidth = 1.0
-        self.imageSegmentView.backgroundColor = UIColor.clear
-
-        self.imageSegmentView.layer.cornerRadius = 5.0
-        self.imageSegmentView.layer.borderColor = UIColor.white.cgColor
-        self.imageSegmentView.layer.borderWidth = 2.0
+        self.imageSegmentView.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
         self.imageSegmentView.addSegmentWithTitle("",
@@ -130,14 +109,7 @@ class ViewController: UIViewController {
                                                                                  y: self.view.frame.height - 80,
                                                                                  width: self.view.frame.width - 50,
                                                                                  height: 50))
-        self.programaticallySegmentedControl?.segmentAppearance = SegmentControlAppearence.appearence()
-        self.programaticallySegmentedControl?.dividerColour = UIColor(white: 0.95, alpha: 0.3)
-        self.programaticallySegmentedControl?.dividerWidth = 1.0
-        self.programaticallySegmentedControl?.backgroundColor = UIColor.clear
-
-        self.programaticallySegmentedControl?.layer.cornerRadius = 5.0
-        self.programaticallySegmentedControl?.layer.borderColor = UIColor.white.cgColor
-        self.programaticallySegmentedControl?.layer.borderWidth = 2.0
+        self.programaticallySegmentedControl?.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
         self.programaticallySegmentedControl?.addSegmentWithTitle("Emojiraf")

@@ -10,14 +10,18 @@ import UIKit
 
 public class BadgeSegmentControl: UIControl {
 
-    public var segmentAppearance: BadgeSegmentControlAppearence?
+    public var segmentAppearance: BadgeSegmentControlAppearance? {
+        didSet {
+            self.applyAppearence()
+        }
+    }
 
     public var dividerColour: UIColor = UIColor.lightGray {
         didSet {
             self.setNeedsDisplay()
         }
     }
-    
+
     public var dividerWidth: CGFloat = 1.0 {
         didSet {
             self.updateSegmentsLayout()
@@ -55,31 +59,43 @@ public class BadgeSegmentControl: UIControl {
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+
+        // Init 
         self.layer.masksToBounds = true
-        self.segmentAppearance = BadgeSegmentControlAppearence()
+        self.segmentAppearance = BadgeSegmentControlAppearance()
     }
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.clear
+
+        // Init 
         self.layer.masksToBounds = true
-        self.segmentAppearance = BadgeSegmentControlAppearence()
+        self.segmentAppearance = BadgeSegmentControlAppearance()
     }
 
     public init(frame: CGRect,
-                dividerColour: UIColor,
-                dividerWidth: CGFloat,
-                segmentAppearance: BadgeSegmentControlAppearence) {
-
+                segmentAppearance: BadgeSegmentControlAppearance) {
         super.init(frame: frame)
 
-        self.dividerColour = dividerColour
-        self.dividerWidth = dividerWidth
-
+        // Init 
         self.segmentAppearance = segmentAppearance
-
-        self.backgroundColor = UIColor.clear
         self.layer.masksToBounds = true
+    }
+
+    fileprivate func applyAppearence() {
+        let appearence: BadgeSegmentControlAppearance = self.segmentAppearance ?? BadgeSegmentControlAppearance()
+
+        // Divider 
+        self.dividerColour = appearence.dividerColour
+        self.dividerWidth = appearence.dividerWidth
+
+        // Background 
+        self.backgroundColor = appearence.backgroundColor
+
+        // Border 
+        self.layer.borderWidth = appearence.borderWidth
+        self.layer.cornerRadius = appearence.cornerRadius
+        self.layer.borderColor = appearence.borderColor.cgColor
     }
 
     // MARK: - Actions
@@ -89,6 +105,7 @@ public class BadgeSegmentControl: UIControl {
         self.selectedSegment = segment
         self.sendActions(for: .valueChanged)
     }
+
     fileprivate func deselectSegment() {
         self.selectedSegment?.setSelected(false)
         self.selectedSegment = nil

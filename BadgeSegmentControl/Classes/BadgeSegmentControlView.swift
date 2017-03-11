@@ -36,7 +36,7 @@ open class BadgeSegmentControlView: UIView {
     open var offSelectionImage: UIImage?
 
     // Appearance
-    open var appearance: BadgeSegmentControlAppearence?
+    open var appearance: BadgeSegmentControlAppearance?
 
     internal var didSelectSegment: ((_ segment: BadgeSegmentControlView) -> Void)?
 
@@ -46,7 +46,7 @@ open class BadgeSegmentControlView: UIView {
 
     // MARK: - Lifecycle
 
-    internal init(appearance: BadgeSegmentControlAppearence?) {
+    internal init(appearance: BadgeSegmentControlAppearance?) {
         super.init(frame: CGRect.zero)
 
         // Apperence 

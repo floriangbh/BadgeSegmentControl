@@ -72,53 +72,35 @@ For customisation, I think the better way is to subclass BadgeSegmentControl lik
 ```swift
 import BadgeSegmentControl
 
-class MyCustomSegmentControl: BadgeSegmentControl {
-    
-    // MARK: - Appearence 
+class func appearance() -> BadgeSegmentControlAppearence {
+    let appearance = BadgeSegmentControlAppearence()
 
-    fileprivate func appearence() -> BadgeSegmentControlAppearence {
-        let appearance = BadgeSegmentControlAppearence()
+    // Segment color 
+    appearance.segmentOnSelectionColour = UIColor.white
+    appearance.segmentOffSelectionColour = UIColor(red:1.00, green:0.62, blue:0.22, alpha:1.00)
 
-        // Segment color 
-        appearance.segmentOnSelectionColour = UIColor.white
-        appearance.segmentOffSelectionColour = UIColor.red
-        appearance.segmentTouchDownColour = UIColor.white.withAlphaComponent(0.4)
+    // Title font 
+    appearance.titleOnSelectionFont = UIFont.systemFont(ofSize: 14)
+    appearance.titleOffSelectionFont = UIFont.systemFont(ofSize: 14)
 
-        // Title font 
-        appearance.titleOnSelectionFont = <font>
-        appearance.titleOffSelectionFont = <font>
+    // Title color 
+    appearance.titleOnSelectionColour = UIColor(red:1.00, green:0.62, blue:0.22, alpha:1.00)
+    appearance.titleOffSelectionColour = UIColor.white
 
-        // Title color 
-        appearance.titleOnSelectionColour = UIColor.red
-        appearance.titleOffSelectionColour = UIColor.white
+    // Vertical margin 
+    appearance.contentVerticalMargin = 10.0
 
-        // Vertical margin 
-        appearance.contentVerticalMargin = 10.0
+    // Border style
+    appearance.borderColor = UIColor.white
+    appearance.cornerRadius = 5.0
+    appearance.borderWidth = 2.0
 
-        return appearance
-    }
+    // Divider style
+    appearance.dividerWidth = 1.0
+    appearance.dividerColour = UIColor(white: 0.95, alpha: 0.3)
 
-    func applyAppearence() {
-        // Appearence 
-        self.segmentAppearance = self.appearence()
-
-        // Divider
-        self.dividerColour = UIColor(white: 0.95, alpha: 0.3)
-        self.dividerWidth = 1.0
-
-        // Background
-        self.backgroundColor = UIColor.clear
-
-        // Border 
-        self.layer.cornerRadius = 5
-        self.layer.borderColor = UIColor.white.cgColor
-        self.layer.borderWidth = 2.0
-
-        // Set segment with index 0 as selected by default
-        self.selectedSegmentIndex = 0
-    }
+    return appearance
 }
-
 ```
 
 ## Applications
