@@ -55,10 +55,38 @@ pod "BadgeSegmentControl"
 import BadgeSegmentControl
 ```
 
-- Display the segment control : 
+- Display the segment control programmatically : 
 
 ```swift
-TODO
+func addWithoutStoryboard() {
+    let padding: CGFloat = 50
+    let mySegmentControl = BadgeSegmentControl(frame: CGRect(x: padding / 2,
+                                                               y: self.view.frame.height - (padding * 2),
+                                                               width: self.view.frame.width - padding,
+                                                               height: padding))
+    self.mySegmentControl?.segmentAppearance = SegmentControlAppearance.appearance()
+
+    // Add segments
+    v?.addSegmentWithTitle("First")
+    self.mySegmentControl?.addSegmentWithTitle("Second")
+
+    self.mySegmentControl?.addTarget(self,
+                                                    action: #selector(selectSegmentInSegmentView(segmentView:)),
+                                                    for: .valueChanged)
+
+    // Set segment with index 0 as selected by default
+    self.mySegmentControl?.selectedSegmentIndex = 0
+
+    // Add to subview
+    if let segmentControl = self.mySegmentControl {
+        self.view.addSubview(segmentControl)
+    }
+}
+
+// Segment selector for .ValueChanged
+func selectSegmentInSegmentView(segmentView: BadgeSegmentControl) {
+    print("Select segment at index: \(segmentView.selectedSegmentIndex)")
+}
 ```
 
 - From the storyboard : 
@@ -72,7 +100,7 @@ For customisation, I think the better way is to subclass BadgeSegmentControl lik
 ```swift
 import BadgeSegmentControl
 
-class func appearance() -> BadgeSegmentControlAppearence {
+func appearance() -> BadgeSegmentControlAppearence {
     let appearance = BadgeSegmentControlAppearence()
 
     // Segment color 
@@ -101,6 +129,8 @@ class func appearance() -> BadgeSegmentControlAppearence {
 
     return appearance
 }
+
+self.mySegmentControl?.segmentAppearance = self.appearance()
 ```
 
 ## Applications

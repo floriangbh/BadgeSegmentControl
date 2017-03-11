@@ -117,8 +117,8 @@ class ViewController: UIViewController {
         self.programaticallySegmentedControl?.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
-        self.programaticallySegmentedControl?.addSegmentWithTitle(self.firstSegmentName)
-        self.programaticallySegmentedControl?.addSegmentWithTitle(self.secondSegmentName)
+        self.programaticallySegmentedControl?.addSegmentWithTitle("First")
+        self.programaticallySegmentedControl?.addSegmentWithTitle("Second")
 
         self.programaticallySegmentedControl?.addTarget(self,
                                                        action: #selector(selectSegmentInSegmentView(segmentView:)),
