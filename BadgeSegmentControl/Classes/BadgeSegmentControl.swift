@@ -171,7 +171,7 @@ open class BadgeSegmentControl: UIControl {
 
     // MARK: - Layout 
 
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         self.updateSegmentsLayout()
     }
