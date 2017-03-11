@@ -28,6 +28,10 @@ class ViewController: UIViewController {
     fileprivate var secondBadgeValue: Int = 0
 
     fileprivate var programaticallySegmentedControl: BadgeSegmentControl?
+    
+    fileprivate let firstSegmentName = "First"
+    
+    fileprivate let secondSegmentName =  "Second"
 
     // MARK: - Lifecycle
 
@@ -56,8 +60,8 @@ class ViewController: UIViewController {
         self.simpleSegmentView.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
-        self.simpleSegmentView.addSegmentWithTitle("Emojiraf")
-        self.simpleSegmentView.addSegmentWithTitle("Messages")
+        self.simpleSegmentView.addSegmentWithTitle(self.firstSegmentName)
+        self.simpleSegmentView.addSegmentWithTitle(self.secondSegmentName)
 
         self.simpleSegmentView.addTarget(self, action: #selector(selectSegmentInSegmentView(segmentView:)),
                                          for: .valueChanged)
@@ -71,10 +75,10 @@ class ViewController: UIViewController {
         self.segmentView.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
-        self.segmentView.addSegmentWithTitle("Emojiraf",
+        self.segmentView.addSegmentWithTitle(self.firstSegmentName,
                                              onSelectionImage: UIImage(named: "emoji")?.imageWithColor(self.mainColor),
                                              offSelectionImage: UIImage(named: "emoji")?.imageWithColor(UIColor.white))
-        self.segmentView.addSegmentWithTitle("Messages",
+        self.segmentView.addSegmentWithTitle(self.secondSegmentName,
                                              onSelectionImage: UIImage(named: "message")?.imageWithColor(self.mainColor),
                                              offSelectionImage: UIImage(named: "message")?.imageWithColor(UIColor.white))
 
@@ -112,8 +116,8 @@ class ViewController: UIViewController {
         self.programaticallySegmentedControl?.segmentAppearance = SegmentControlAppearance.appearance()
 
         // Add segments
-        self.programaticallySegmentedControl?.addSegmentWithTitle("Emojiraf")
-        self.programaticallySegmentedControl?.addSegmentWithTitle("Messages")
+        self.programaticallySegmentedControl?.addSegmentWithTitle(self.firstSegmentName)
+        self.programaticallySegmentedControl?.addSegmentWithTitle(self.secondSegmentName)
 
         self.programaticallySegmentedControl?.addTarget(self,
                                                        action: #selector(selectSegmentInSegmentView(segmentView:)),
