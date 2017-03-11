@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'BadgeSegmentControl'
-s.version          = '1.0.3'
+s.version          = '1.0.4'
 s.summary          = 'Sweet SegmentControl with image and badge.'
 s.homepage         = 'https://github.com/terflogag/BadgeSegmentControl'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }

@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 1.0.4
+
+- Fix access control 
+
 ### 1.0.3
 
 - Udpate exemple
