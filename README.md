@@ -58,31 +58,32 @@ import BadgeSegmentControl
 - Display the segment control programmatically : 
 
 ```swift
-func addSegmentControl() {
-    let padding: CGFloat = 50
-    let mySegmentControl = BadgeSegmentControl(frame: CGRect(x: padding / 2,
-                                                               y: self.view.frame.height - (padding * 2),
-                                                               width: self.view.frame.width - padding,
-                                                               height: padding))
-    self.mySegmentControl?.segmentAppearance = SegmentControlAppearance.appearance()
+let padding: CGFloat = 50
+let mySegmentControl = BadgeSegmentControl(frame: CGRect(x: padding / 2,
+                                                         y: self.view.frame.height - (padding * 2),
+                                                         width: self.view.frame.width - padding,
+                                                         height: padding))
+self.mySegmentControl?.segmentAppearance = SegmentControlAppearance.appearance()
 
-    // Add segments
-    v?.addSegmentWithTitle("First")
-    self.mySegmentControl?.addSegmentWithTitle("Second")
+// Add segments
+self.mySegmentControl??.addSegmentWithTitle("First")
+self.mySegmentControl?.addSegmentWithTitle("Second")
+self.mySegmentControl?.addTarget(self,
+                                 action: #selector(selectSegmentInSegmentView(segmentView:)),
+                                 for: .valueChanged)
 
-    self.mySegmentControl?.addTarget(self,
-                                                    action: #selector(selectSegmentInSegmentView(segmentView:)),
-                                                    for: .valueChanged)
+// Set segment with index 0 as selected by default
+self.mySegmentControl?.selectedSegmentIndex = 0
 
-    // Set segment with index 0 as selected by default
-    self.mySegmentControl?.selectedSegmentIndex = 0
-
-    // Add to subview
-    if let segmentControl = self.mySegmentControl {
-        self.view.addSubview(segmentControl)
-    }
+// Add to subview
+if let segmentControl = self.mySegmentControl {
+    self.view.addSubview(segmentControl)
 }
+```
 
+- Listen for change : 
+
+```swift
 // Segment selector for .ValueChanged
 func selectSegmentInSegmentView(segmentView: BadgeSegmentControl) {
     print("Select segment at index: \(segmentView.selectedSegmentIndex)")
@@ -94,8 +95,6 @@ func selectSegmentInSegmentView(segmentView: BadgeSegmentControl) {
 Just set an UIView with BadgeSegmentControl class and export to an IBOutlet.
 
 ## Customisation
-
-For customisation, I think the better way is to subclass BadgeSegmentControl like the exemple bellow :
 
 ```swift
 import BadgeSegmentControl
