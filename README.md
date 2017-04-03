@@ -66,7 +66,7 @@ let mySegmentControl = BadgeSegmentControl(frame: CGRect(x: padding / 2,
 self.mySegmentControl?.segmentAppearance = SegmentControlAppearance.appearance()
 
 // Add segments
-self.mySegmentControl??.addSegmentWithTitle("First")
+self.mySegmentControl?.addSegmentWithTitle("First")
 self.mySegmentControl?.addSegmentWithTitle("Second")
 self.mySegmentControl?.addTarget(self,
                                  action: #selector(selectSegmentInSegmentView(segmentView:)),
