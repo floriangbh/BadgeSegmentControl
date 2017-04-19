@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 1.0.6
+
+- Reduce logo size
+
 ### 1.0.5
 
 - Fix access control 
