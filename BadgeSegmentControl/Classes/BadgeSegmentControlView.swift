@@ -105,10 +105,11 @@ open class BadgeSegmentControlView: UIView {
         }
 
         // Image view
+        let height = self.frame.size.height - (verticalMargin * 1.8)
         var imageViewFrame = CGRect(x: 0.0,
-                                    y: verticalMargin / 1.5,
+                                    y: self.frame.size.height / 2 - (height / 2),
                                     width: 0.0,
-                                    height: self.frame.size.height - (verticalMargin * 1.5))
+                                    height: height)
 
         if self.onSelectionImage != nil || self.offSelectionImage != nil {
             // Set imageView as a square
