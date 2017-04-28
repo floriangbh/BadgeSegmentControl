@@ -80,6 +80,7 @@ open class BadgeSegmentControlView: UIView {
 
         // Selection bar 
         self.addSubview(self.selectionbar)
+        self.selectionbar.isHidden = true
     }
 
     /// Prepare all element appearence (badge, label, badge)
@@ -149,7 +150,6 @@ open class BadgeSegmentControlView: UIView {
         self.positionBadge()
 
         // Selection bar 
-        self.selectionbar.isHidden = !(appearance?.showSelectionBar ?? false)
         let barHeight: CGFloat = appearance?.selectionBarHeight ?? 5.0
         self.selectionbar.frame = CGRect(x: 0,
                                          y: self.frame.height - barHeight,
