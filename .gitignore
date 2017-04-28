@@ -28,4 +28,8 @@ profile
 Carthage/
 *.resolved
 
+# Pods 
+Pods/
+Exemple/Pods/
+
 
