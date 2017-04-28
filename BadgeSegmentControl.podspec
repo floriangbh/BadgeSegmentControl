@@ -8,5 +8,5 @@ s.author           = { 'Florian Gabach' => 'contact@floriangabach.fr' }
 s.source           = { :git => 'https://github.com/terflogag/BadgeSegmentControl.git', :tag => s.version.to_s }
 s.ios.deployment_target = '9.0'
 s.source_files = 'BadgeSegmentControl/Classes/**/*'
-s.dependency 'BadgeSwift', '~> 4.0'
+s.dependency 'BadgeSwift', '~> 5.0'
 end
