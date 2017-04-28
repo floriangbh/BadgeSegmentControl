@@ -20,6 +20,8 @@ open class BadgeSegmentControlView: UIView {
 
     fileprivate var badge: BadgeSwift = BadgeSwift()
 
+    fileprivate var selectionbar: UIView = UIView()
+
     // Title
     public var title: String? {
         didSet {
@@ -75,6 +77,9 @@ open class BadgeSegmentControlView: UIView {
         // Add badge
         self.addSubview(self.badge)
         self.badge.isHidden = true
+
+        // Selection bar 
+        self.addSubview(self.selectionbar)
     }
 
     /// Prepare all element appearence (badge, label, badge)
@@ -86,6 +91,7 @@ open class BadgeSegmentControlView: UIView {
                 self.label.textColor = appearance.titleOffSelectionColour
                 self.configureBadge()
                 self.updateBadgeValue(forValue: 0)
+                self.selectionbar.backgroundColor = appearance.selectionBarColor
             }
             self.imageView.image = self.offSelectionImage
         })
@@ -141,6 +147,14 @@ open class BadgeSegmentControlView: UIView {
             self.badge.frame.width -
             (self.appearance?.borderWidth ?? 0) - 1
         self.positionBadge()
+
+        // Selection bar 
+        self.selectionbar.isHidden = !(appearance?.showSelectionBar ?? false)
+        let barHeight: CGFloat = appearance?.selectionBarHeight ?? 5.0
+        self.selectionbar.frame = CGRect(x: 0,
+                                         y: self.frame.height - barHeight,
+                                         width: self.frame.width,
+                                         height: barHeight)
     }
 
     // MARK: Selections
@@ -156,6 +170,10 @@ open class BadgeSegmentControlView: UIView {
                 self.backgroundColor = self.appearance?.segmentOnSelectionColour
                 self.label.textColor = self.appearance?.titleOnSelectionColour
                 self.imageView.image = self.onSelectionImage
+
+                if self.appearance?.showSelectionBar == true {
+                    self.selectionbar.isHidden = false
+                }
             })
         } else {
             // Unselected style
@@ -163,6 +181,10 @@ open class BadgeSegmentControlView: UIView {
                 self.backgroundColor = self.appearance?.segmentOffSelectionColour
                 self.label.textColor = self.appearance?.titleOffSelectionColour
                 self.imageView.image = self.offSelectionImage
+
+                if self.appearance?.showSelectionBar == true {
+                    self.selectionbar.isHidden = true
+                }
             })
         }
     }

@@ -17,6 +17,7 @@
 		7668ACB31E6D4F0600FE876D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7668ACB21E6D4F0600FE876D /* UIImage+Extensions.swift */; };
 		7668ACB51E6D523500FE876D /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 7668ACB41E6D523500FE876D /* CHANGELOG.md */; };
 		76C020211E685E6D00CBE5A9 /* SegmentControlAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C020201E685E6D00CBE5A9 /* SegmentControlAppearence.swift */; };
+		76C1D88A1EB32D66006560EC /* SegmentControlBarAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1D8891EB32D66006560EC /* SegmentControlBarAppearence.swift */; };
 		CA748A69A4D64C6A044555ED /* Pods_BadgeSegmentControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DAA67335AF504B435EB5C48 /* Pods_BadgeSegmentControl_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,7 @@
 		607FACD01AFB9204008FA782 /* BadgeSegmentControl_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeSegmentControl_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BadgeSegmentControl/ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		7668ACB21E6D4F0600FE876D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		7668ACB41E6D523500FE876D /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		76C020201E685E6D00CBE5A9 /* SegmentControlAppearence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentControlAppearence.swift; sourceTree = "<group>"; };
+		76C1D8891EB32D66006560EC /* SegmentControlBarAppearence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentControlBarAppearence.swift; sourceTree = "<group>"; };
 		856E31749EA47C69BE79973C /* BadgeSegmentControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BadgeSegmentControl.podspec; path = ../BadgeSegmentControl.podspec; sourceTree = "<group>"; };
 		8D566A96BA238A0716B57640 /* Pods-BadgeSegmentControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeSegmentControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BadgeSegmentControl_Tests/Pods-BadgeSegmentControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8EEFE977467E8239D818FC94 /* Pods_BadgeSegmentControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BadgeSegmentControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				76C020201E685E6D00CBE5A9 /* SegmentControlAppearence.swift */,
+				76C1D8891EB32D66006560EC /* SegmentControlBarAppearence.swift */,
 				7668ACB21E6D4F0600FE876D /* UIImage+Extensions.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -139,7 +143,6 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				856E31749EA47C69BE79973C /* BadgeSegmentControl.podspec */,
 				538D045FAF1268CAA6FB0F67 /* README.md */,
 				B0F3795CC97596595458E73E /* LICENSE */,
@@ -196,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BadgeSegmentControl_Tests" */;
 			buildPhases = (
+				76C1D88B1EB32D8E006560EC /* ShellScript */,
 				B8ED386E8C9D3CB888FF33E4 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
@@ -303,6 +307,19 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		76C1D88B1EB32D8E006560EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint autocorrect";
+		};
 		826A606B643889B4E26F423D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +405,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				7668ACB51E6D523500FE876D /* CHANGELOG.md in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				76C1D88A1EB32D66006560EC /* SegmentControlBarAppearence.swift in Sources */,
 				76C020211E685E6D00CBE5A9 /* SegmentControlAppearence.swift in Sources */,
 				7668ACB31E6D4F0600FE876D /* UIImage+Extensions.swift in Sources */,
 			);

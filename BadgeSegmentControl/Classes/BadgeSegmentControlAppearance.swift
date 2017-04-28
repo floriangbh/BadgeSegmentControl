@@ -33,6 +33,10 @@ open class BadgeSegmentControlAppearance {
 
     open var backgroundColor: UIColor
 
+    open var selectionBarColor: UIColor
+    open var showSelectionBar: Bool
+    open var selectionBarHeight: CGFloat
+
     // MARK: - Lifecycle
 
     /// Default init for appearance
@@ -62,5 +66,10 @@ open class BadgeSegmentControlAppearance {
 
         // Background 
         self.backgroundColor = UIColor.clear
+
+        // Selection bar 
+        self.selectionBarColor = UIColor.darkGray
+        self.selectionBarHeight = 8.0
+        self.showSelectionBar = false
     }
 }
