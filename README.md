@@ -28,7 +28,6 @@ Sweet segment control with image, text and badge ! Hightly customisable.
 
 ## Todo (feel free to make PR)
 
-- [ ] Carthage support 
 - [ ] Unit & UI Test 
 
 ## Requirements
