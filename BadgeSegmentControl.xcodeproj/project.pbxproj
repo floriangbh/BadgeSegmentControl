@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		52D6D9871BEFF229002C0205 /* BadgeSegmentControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* BadgeSegmentControl.framework */; };
-		8933C7851EB5B820000D00A4 /* BadgeSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* BadgeSegmentControl.swift */; };
+		76C078F11EF6C3A900979720 /* BadgeSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C078EE1EF6C3A900979720 /* BadgeSegmentControl.swift */; };
+		76C078F21EF6C3A900979720 /* BadgeSegmentControlAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C078EF1EF6C3A900979720 /* BadgeSegmentControlAppearance.swift */; };
+		76C078F31EF6C3A900979720 /* BadgeSegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C078F01EF6C3A900979720 /* BadgeSegmentControlView.swift */; };
+		76C078F71EF6C40D00979720 /* BadgeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76C078F61EF6C40D00979720 /* BadgeSwift.framework */; };
 		8933C7901EB5B82D000D00A4 /* BadgeSegmentControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* BadgeSegmentControlTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +28,10 @@
 /* Begin PBXFileReference section */
 		52D6D97C1BEFF229002C0205 /* BadgeSegmentControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BadgeSegmentControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* BadgeSegmentControl-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BadgeSegmentControl-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8933C7841EB5B820000D00A4 /* BadgeSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSegmentControl.swift; sourceTree = "<group>"; };
+		76C078EE1EF6C3A900979720 /* BadgeSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSegmentControl.swift; sourceTree = "<group>"; };
+		76C078EF1EF6C3A900979720 /* BadgeSegmentControlAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSegmentControlAppearance.swift; sourceTree = "<group>"; };
+		76C078F01EF6C3A900979720 /* BadgeSegmentControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSegmentControlView.swift; sourceTree = "<group>"; };
+		76C078F61EF6C40D00979720 /* BadgeSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BadgeSwift.framework; path = Carthage/Build/iOS/BadgeSwift.framework; sourceTree = "<group>"; };
 		8933C7891EB5B82A000D00A4 /* BadgeSegmentControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeSegmentControlTests.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* BadgeSegmentControl.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BadgeSegmentControl.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* BadgeSegmentControlTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BadgeSegmentControlTests.plist; sourceTree = "<group>"; };
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C078F71EF6C40D00979720 /* BadgeSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +64,7 @@
 				8933C7831EB5B7EB000D00A4 /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
 				52D6D97D1BEFF229002C0205 /* Products */,
+				76C078F51EF6C40D00979720 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +86,20 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		76C078F51EF6C40D00979720 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76C078F61EF6C40D00979720 /* BadgeSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8933C7841EB5B820000D00A4 /* BadgeSegmentControl.swift */,
+				76C078EE1EF6C3A900979720 /* BadgeSegmentControl.swift */,
+				76C078EF1EF6C3A900979720 /* BadgeSegmentControlAppearance.swift */,
+				76C078F01EF6C3A900979720 /* BadgeSegmentControlView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -132,6 +150,7 @@
 				52D6D9781BEFF229002C0205 /* Frameworks */,
 				52D6D9791BEFF229002C0205 /* Headers */,
 				52D6D97A1BEFF229002C0205 /* Resources */,
+				76C078F41EF6C3F900979720 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -215,12 +234,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76C078F41EF6C3F900979720 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52D6D9771BEFF229002C0205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8933C7851EB5B820000D00A4 /* BadgeSegmentControl.swift in Sources */,
+				76C078F11EF6C3A900979720 /* BadgeSegmentControl.swift in Sources */,
+				76C078F31EF6C3A900979720 /* BadgeSegmentControlView.swift in Sources */,
+				76C078F21EF6C3A900979720 /* BadgeSegmentControlAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +386,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Configs/BadgeSegmentControl.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -371,6 +413,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Configs/BadgeSegmentControl.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
