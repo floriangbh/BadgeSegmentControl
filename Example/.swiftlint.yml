@@ -1,6 +1,0 @@
-disabled_rules: # rule identifiers to exclude from running
-  - implicit_getter
-
-included: 
-  # View
-  - ../BadgeSegmentControl/Classes 
