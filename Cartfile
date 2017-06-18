@@ -1,0 +1,2 @@
+# Require version 5.0 
+github "marketplacer/swift-badge" ~> 5.0
