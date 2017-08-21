@@ -85,13 +85,13 @@ open class BadgeSegmentControl: UIControl {
     fileprivate func applyAppearence() {
         let appearence: BadgeSegmentControlAppearance = self.segmentAppearance ?? BadgeSegmentControlAppearance()
 
-        // Divider 
+        // Divider
         self.dividerColour = appearence.dividerColour
         self.dividerWidth = appearence.dividerWidth
 
         // Background 
         self.backgroundColor = appearence.backgroundColor
-
+        
         // Border 
         self.layer.borderWidth = appearence.borderWidth
         self.layer.cornerRadius = appearence.cornerRadius
@@ -238,5 +238,9 @@ open class BadgeSegmentControl: UIControl {
 
     public func updateBadge(forValue value: Int, andSection section: Int) {
         self.segments[section].updateBadgeValue(forValue: value)
+    }
+    
+    func badgeValue(for section: Int) -> Int {
+        return segments[section].badgeValue
     }
 }
