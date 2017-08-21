@@ -12,7 +12,8 @@ import BadgeSwift
 open class BadgeSegmentControlView: UIView {
 
     // MARK: - Var 
-
+    public var badgeValue: Int = 0
+    
     // UI components
     fileprivate var imageView: UIImageView = UIImageView()
 
@@ -267,6 +268,7 @@ open class BadgeSegmentControlView: UIView {
     ///
     /// - Parameter value: the value to set 
     func updateBadgeValue(forValue value: Int) {
+        self.badgeValue = value
         if value > 0 && value <= 99 {
             // Badge between 1 and 99
             self.badge.isHidden = false
