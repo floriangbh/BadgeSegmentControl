@@ -14,9 +14,13 @@
 		765E41B61F4C5419002EBE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765E41B41F4C5419002EBE16 /* LaunchScreen.storyboard */; };
 		765E41C11F4C541A002EBE16 /* ExempleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41C01F4C541A002EBE16 /* ExempleTests.swift */; };
 		765E41CC1F4C541A002EBE16 /* ExempleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41CB1F4C541A002EBE16 /* ExempleUITests.swift */; };
-		765E41DC1F4C543D002EBE16 /* BadgeSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41D91F4C543D002EBE16 /* BadgeSegmentControl.swift */; };
-		765E41DD1F4C543D002EBE16 /* BadgeSegmentControlAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41DA1F4C543D002EBE16 /* BadgeSegmentControlAppearance.swift */; };
-		765E41DE1F4C543D002EBE16 /* BadgeSegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41DB1F4C543D002EBE16 /* BadgeSegmentControlView.swift */; };
+		76A7576E1F58899D0029D798 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7576D1F58899D0029D798 /* UIImage+Extensions.swift */; };
+		76A757701F5889AB0029D798 /* SegmentControlBarAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7576F1F5889AB0029D798 /* SegmentControlBarAppearence.swift */; };
+		76A757721F5889B00029D798 /* SegmentControlAppearence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A757711F5889B00029D798 /* SegmentControlAppearence.swift */; };
+		76A757791F59BA6B0029D798 /* BadgeSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A757761F59BA6B0029D798 /* BadgeSegmentControl.swift */; };
+		76A7577A1F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A757771F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift */; };
+		76A7577B1F59BA6B0029D798 /* BadgeSegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A757781F59BA6B0029D798 /* BadgeSegmentControlView.swift */; };
+		76A7577E1F59BA8F0029D798 /* BadgeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A7577D1F59BA8F0029D798 /* BadgeSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +54,13 @@
 		765E41C71F4C541A002EBE16 /* ExempleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExempleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		765E41CB1F4C541A002EBE16 /* ExempleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExempleUITests.swift; sourceTree = "<group>"; };
 		765E41CD1F4C541A002EBE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		765E41D91F4C543D002EBE16 /* BadgeSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControl.swift; path = ../../../Sources/BadgeSegmentControl.swift; sourceTree = "<group>"; };
-		765E41DA1F4C543D002EBE16 /* BadgeSegmentControlAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControlAppearance.swift; path = ../../../Sources/BadgeSegmentControlAppearance.swift; sourceTree = "<group>"; };
-		765E41DB1F4C543D002EBE16 /* BadgeSegmentControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControlView.swift; path = ../../../Sources/BadgeSegmentControlView.swift; sourceTree = "<group>"; };
+		76A7576D1F58899D0029D798 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		76A7576F1F5889AB0029D798 /* SegmentControlBarAppearence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentControlBarAppearence.swift; sourceTree = "<group>"; };
+		76A757711F5889B00029D798 /* SegmentControlAppearence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentControlAppearence.swift; sourceTree = "<group>"; };
+		76A757761F59BA6B0029D798 /* BadgeSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControl.swift; path = ../../Sources/BadgeSegmentControl.swift; sourceTree = "<group>"; };
+		76A757771F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControlAppearance.swift; path = ../../Sources/BadgeSegmentControlAppearance.swift; sourceTree = "<group>"; };
+		76A757781F59BA6B0029D798 /* BadgeSegmentControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControlView.swift; path = ../../Sources/BadgeSegmentControlView.swift; sourceTree = "<group>"; };
+		76A7577D1F59BA8F0029D798 /* BadgeSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BadgeSwift.framework; path = Carthage/Build/iOS/BadgeSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A7577E1F59BA8F0029D798 /* BadgeSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +96,7 @@
 				765E41BF1F4C541A002EBE16 /* ExempleTests */,
 				765E41CA1F4C541A002EBE16 /* ExempleUITests */,
 				765E41A91F4C5419002EBE16 /* Products */,
+				76A7577C1F59BA8F0029D798 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +115,10 @@
 			children = (
 				765E41DF1F4C5441002EBE16 /* BadgeSegmentControl */,
 				765E41AB1F4C5419002EBE16 /* AppDelegate.swift */,
+				76A757711F5889B00029D798 /* SegmentControlAppearence.swift */,
+				76A7576F1F5889AB0029D798 /* SegmentControlBarAppearence.swift */,
 				765E41AD1F4C5419002EBE16 /* ViewController.swift */,
+				76A7576D1F58899D0029D798 /* UIImage+Extensions.swift */,
 				765E41AF1F4C5419002EBE16 /* Main.storyboard */,
 				765E41B21F4C5419002EBE16 /* Assets.xcassets */,
 				765E41B41F4C5419002EBE16 /* LaunchScreen.storyboard */,
@@ -135,11 +148,19 @@
 		765E41DF1F4C5441002EBE16 /* BadgeSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
-				765E41D91F4C543D002EBE16 /* BadgeSegmentControl.swift */,
-				765E41DA1F4C543D002EBE16 /* BadgeSegmentControlAppearance.swift */,
-				765E41DB1F4C543D002EBE16 /* BadgeSegmentControlView.swift */,
+				76A757761F59BA6B0029D798 /* BadgeSegmentControl.swift */,
+				76A757771F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift */,
+				76A757781F59BA6B0029D798 /* BadgeSegmentControlView.swift */,
 			);
 			name = BadgeSegmentControl;
+			sourceTree = "<group>";
+		};
+		76A7577C1F59BA8F0029D798 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76A7577D1F59BA8F0029D798 /* BadgeSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +173,7 @@
 				765E41A41F4C5419002EBE16 /* Sources */,
 				765E41A51F4C5419002EBE16 /* Frameworks */,
 				765E41A61F4C5419002EBE16 /* Resources */,
+				76A757751F59B9A50029D798 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -274,15 +296,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76A757751F59B9A50029D798 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BadgeSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BadgeSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		765E41A41F4C5419002EBE16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				765E41AE1F4C5419002EBE16 /* ViewController.swift in Sources */,
-				765E41DD1F4C543D002EBE16 /* BadgeSegmentControlAppearance.swift in Sources */,
-				765E41DC1F4C543D002EBE16 /* BadgeSegmentControl.swift in Sources */,
-				765E41DE1F4C543D002EBE16 /* BadgeSegmentControlView.swift in Sources */,
+				76A757721F5889B00029D798 /* SegmentControlAppearence.swift in Sources */,
+				76A757791F59BA6B0029D798 /* BadgeSegmentControl.swift in Sources */,
+				76A757701F5889AB0029D798 /* SegmentControlBarAppearence.swift in Sources */,
+				76A7577A1F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift in Sources */,
+				76A7577B1F59BA6B0029D798 /* BadgeSegmentControlView.swift in Sources */,
+				76A7576E1F58899D0029D798 /* UIImage+Extensions.swift in Sources */,
 				765E41AC1F4C5419002EBE16 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62PP362QNQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Exemple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fg.Exemple;
@@ -451,6 +499,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 62PP362QNQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Exemple/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fg.Exemple;
@@ -536,6 +588,7 @@
 				765E41D21F4C541A002EBE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		765E41D31F4C541A002EBE16 /* Build configuration list for PBXNativeTarget "ExempleTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +597,7 @@
 				765E41D51F4C541A002EBE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		765E41D61F4C541A002EBE16 /* Build configuration list for PBXNativeTarget "ExempleUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +606,7 @@
 				765E41D81F4C541A002EBE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
