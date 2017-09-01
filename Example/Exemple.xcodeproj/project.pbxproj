@@ -10,7 +10,6 @@
 		765E41AC1F4C5419002EBE16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41AB1F4C5419002EBE16 /* AppDelegate.swift */; };
 		765E41AE1F4C5419002EBE16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41AD1F4C5419002EBE16 /* ViewController.swift */; };
 		765E41B11F4C5419002EBE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765E41AF1F4C5419002EBE16 /* Main.storyboard */; };
-		765E41B31F4C5419002EBE16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 765E41B21F4C5419002EBE16 /* Assets.xcassets */; };
 		765E41B61F4C5419002EBE16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 765E41B41F4C5419002EBE16 /* LaunchScreen.storyboard */; };
 		765E41C11F4C541A002EBE16 /* ExempleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41C01F4C541A002EBE16 /* ExempleTests.swift */; };
 		765E41CC1F4C541A002EBE16 /* ExempleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765E41CB1F4C541A002EBE16 /* ExempleUITests.swift */; };
@@ -21,6 +20,7 @@
 		76A7577A1F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A757771F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift */; };
 		76A7577B1F59BA6B0029D798 /* BadgeSegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A757781F59BA6B0029D798 /* BadgeSegmentControlView.swift */; };
 		76A7577E1F59BA8F0029D798 /* BadgeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A7577D1F59BA8F0029D798 /* BadgeSwift.framework */; };
+		76A757801F59BE3F0029D798 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A7577F1F59BE3F0029D798 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		765E41AB1F4C5419002EBE16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		765E41AD1F4C5419002EBE16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		765E41B01F4C5419002EBE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		765E41B21F4C5419002EBE16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		765E41B51F4C5419002EBE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		765E41B71F4C5419002EBE16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		765E41BC1F4C541A002EBE16 /* ExempleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExempleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +60,7 @@
 		76A757771F59BA6B0029D798 /* BadgeSegmentControlAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControlAppearance.swift; path = ../../Sources/BadgeSegmentControlAppearance.swift; sourceTree = "<group>"; };
 		76A757781F59BA6B0029D798 /* BadgeSegmentControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BadgeSegmentControlView.swift; path = ../../Sources/BadgeSegmentControlView.swift; sourceTree = "<group>"; };
 		76A7577D1F59BA8F0029D798 /* BadgeSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BadgeSwift.framework; path = Carthage/Build/iOS/BadgeSwift.framework; sourceTree = "<group>"; };
+		76A7577F1F59BE3F0029D798 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,15 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				765E41DF1F4C5441002EBE16 /* BadgeSegmentControl */,
-				765E41AB1F4C5419002EBE16 /* AppDelegate.swift */,
-				76A757711F5889B00029D798 /* SegmentControlAppearence.swift */,
-				76A7576F1F5889AB0029D798 /* SegmentControlBarAppearence.swift */,
-				765E41AD1F4C5419002EBE16 /* ViewController.swift */,
-				76A7576D1F58899D0029D798 /* UIImage+Extensions.swift */,
-				765E41AF1F4C5419002EBE16 /* Main.storyboard */,
-				765E41B21F4C5419002EBE16 /* Assets.xcassets */,
-				765E41B41F4C5419002EBE16 /* LaunchScreen.storyboard */,
-				765E41B71F4C5419002EBE16 /* Info.plist */,
+				76A757811F59BE500029D798 /* Exemple_Source */,
 			);
 			path = Exemple;
 			sourceTree = "<group>";
@@ -161,6 +153,22 @@
 				76A7577D1F59BA8F0029D798 /* BadgeSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76A757811F59BE500029D798 /* Exemple_Source */ = {
+			isa = PBXGroup;
+			children = (
+				765E41AB1F4C5419002EBE16 /* AppDelegate.swift */,
+				76A757711F5889B00029D798 /* SegmentControlAppearence.swift */,
+				76A7576F1F5889AB0029D798 /* SegmentControlBarAppearence.swift */,
+				765E41AD1F4C5419002EBE16 /* ViewController.swift */,
+				76A7576D1F58899D0029D798 /* UIImage+Extensions.swift */,
+				76A7577F1F59BE3F0029D798 /* Images.xcassets */,
+				765E41AF1F4C5419002EBE16 /* Main.storyboard */,
+				765E41B41F4C5419002EBE16 /* LaunchScreen.storyboard */,
+				765E41B71F4C5419002EBE16 /* Info.plist */,
+			);
+			name = Exemple_Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A757801F59BE3F0029D798 /* Images.xcassets in Resources */,
 				765E41B61F4C5419002EBE16 /* LaunchScreen.storyboard in Resources */,
-				765E41B31F4C5419002EBE16 /* Assets.xcassets in Resources */,
 				765E41B11F4C5419002EBE16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
