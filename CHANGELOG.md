@@ -1,6 +1,10 @@
 Changelog
 ==========
 
+### 2.0
+
+- Swift 4 
+
 ### 1.1.4
 
 - Add documentation 
