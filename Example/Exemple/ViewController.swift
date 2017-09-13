@@ -182,7 +182,7 @@ class ViewController: UIViewController {
     }
     
     // Segment selector for .ValueChanged
-    func selectSegmentInSegmentView(segmentView: BadgeSegmentControl) {
+    @objc func selectSegmentInSegmentView(segmentView: BadgeSegmentControl) {
         print("Select segment at index: \(segmentView.selectedSegmentIndex)")
     }
 }
