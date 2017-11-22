@@ -48,7 +48,7 @@ pod "BadgeSegmentControl"
 - To integrate BadgeSegmentControl into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your Cartfile :
 
 ```ruby
-github "terflogag/BadgeSegmentControl" 
+github "floriangbh/BadgeSegmentControl" 
 ```
 
 ## Usage
