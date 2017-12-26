@@ -136,13 +136,6 @@ func appearance() -> BadgeSegmentControlAppearence {
 self.mySegmentControl?.segmentAppearance = self.appearance()
 ```
 
-## Applications
-
-Some application already use this segment control like :
-- [Giraf](https://itunes.apple.com/fr/app/giraf/id1136592561?mt=8)
-
-What about yours ? If your application also use this library, feel free to contact me or make pull request on the README 😁
-
 ## Author
 
 Florian Gabach, florian.gabach@gmail.com
