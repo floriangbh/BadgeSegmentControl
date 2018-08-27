@@ -1,4 +1,4 @@
-# This repository is no longer maintained. Feel free to make fork ! :-) 
+# This repository is no longer maintained. Feel free to make fork.
 
 
 <p align="center">
