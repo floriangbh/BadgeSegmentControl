@@ -1,3 +1,6 @@
+# This repository is no longer maintained. Feel free to make fork ! :-) 
+
+
 <p align="center">
     <a href="https://cocoapods.org/pods/BadgeSegmentControl" target="_blank"><img src="https://img.shields.io/cocoapods/v/BadgeSegmentControl.svg?style=flat" alt="Cocoapods version" /></a>
     <a href="http://cocoapods.org/pods/BadgeSegmentControl" target="_blank"><img src="https://img.shields.io/cocoapods/l/BadgeSegmentControl.svg?style=flat" alt="Cocoapods licence" /></a>
